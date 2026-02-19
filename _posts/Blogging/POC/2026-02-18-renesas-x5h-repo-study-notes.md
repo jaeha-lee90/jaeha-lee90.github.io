@@ -1,13 +1,13 @@
 ---
-title: Renesas X5H Fusion POC Repo Study Notes
+title: R사 X5H Fusion POC Repo Study Notes
 author: JaeHa
 date: 2026-02-18 22:35:00 -0800
-categories: [Renesas, POC]
-tags: [Renesas, X5H, Xen, Android, Yocto, Repo-Analysis]
+categories: [R사, POC]
+tags: [R사, X5H, Xen, Android, Yocto, Repo-Analysis]
 pin: false
 ---
 
-이번에는 Renesas partner GitLab의 X5H Fusion POC 관련 저장소들을 클론하고, 구성/역할/리스크를 빠르게 분석했다.
+이번에는 R사 partner GitLab의 X5H Fusion POC 관련 저장소들을 클론하고, 구성/역할/리스크를 빠르게 분석했다.
 
 ## 분석 대상 (총 9개)
 
