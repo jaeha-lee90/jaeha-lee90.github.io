@@ -14,6 +14,7 @@ pin: true
 1. [R사 X5H 코드 분석 30일 계획](/posts/r-company-30day-plan/)
 2. [X5H Fusion POC 아키텍처 정리](/posts/x5h-fusion-poc-architecture/)
 3. [R사 X5H Fusion POC Repo Study Notes](/posts/renesas-x5h-repo-study-notes/)
+4. [R사 X5H 코드 분석 Day 1 - Boot chain/IPL/firmware 흐름](/posts/r-company-x5h-day1-boot-chain-ipl-firmware/)
 
 ## 운영 원칙
 
