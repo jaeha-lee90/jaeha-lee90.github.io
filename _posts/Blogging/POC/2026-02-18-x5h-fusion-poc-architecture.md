@@ -2,7 +2,7 @@
 title: X5H Fusion POC 아키텍처 정리
 author: JaeHa
 date: 2026-02-18 21:20:00 -0800
-categories: [Blogging, POC]
+categories: [Renesas, POC]
 tags: [Xen, Android, Linux, Renesas, Gen5, IVI]
 pin: false
 ---

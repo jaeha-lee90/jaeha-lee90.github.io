@@ -2,7 +2,7 @@
 title: Renesas X5H Fusion POC Repo Study Notes
 author: JaeHa
 date: 2026-02-18 22:35:00 -0800
-categories: [Blogging, POC]
+categories: [Renesas, POC]
 tags: [Renesas, X5H, Xen, Android, Yocto, Repo-Analysis]
 pin: false
 ---
