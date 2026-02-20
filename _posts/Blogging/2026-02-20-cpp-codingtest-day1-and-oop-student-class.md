@@ -1,39 +1,108 @@
 ---
-title: C++ 코딩테스트 Day1 정리 (LeetCode 4문제) + 클래스(OOP) 입문
+title: C++ 코딩테스트 Day1 복습 + OOP 기초 정리 (unordered_set/map 설명 + 그림 포함)
 author: JaeHa
-date: 2026-02-20 04:30:00 -0800
+date: 2026-02-20 05:10:00 -0800
 categories: [Blogging, CodingTest]
-tags: [C++, LeetCode, HashMap, Array, OOP, Class, 코딩테스트]
+tags: [C++, LeetCode, unordered_set, unordered_map, OOP, Class, 코딩테스트]
 pin: false
 published: true
+mermaid: true
 ---
 
-오늘은 코딩테스트 감각을 올리기 위해 **LeetCode Day1 기본 4문제**를 C++로 정리하고,
-추가로 **클래스 객체지향(OOP) 기초**를 아주 쉬운 예제로 복습했다.
+오늘 학습한 내용을 **처음 보는 사람도 이해할 수 있게** 다시 정리했다.
 
-핵심 목표는 아래 2가지였다.
-- 알고리즘: 자료구조 패턴(해시/배열) 빠르게 꺼내 쓰기
-- C++ 문법: class, 생성자, getter/setter, 캡슐화 감각 익히기
-
----
-
-## 1) LeetCode Day1 - 푼 문제
-
-### 문제 목록
-1. Two Sum (Easy)
-2. Contains Duplicate (Easy)
-3. Valid Anagram (Easy)
-4. Top K Frequent Elements (Medium)
+- 코딩테스트 Day1 문제 4개
+- `unordered_set`, `unordered_map` 개념
+- C++ 클래스(OOP) 입문 (`Student` 예제)
+- 그림(흐름도)으로 로직 이해
 
 ---
 
-## 2) 문제별 핵심 아이디어 + 코드
+## 0) 오늘의 큰 그림
+
+```mermaid
+flowchart LR
+    A[배열 문제 입력] --> B{해시 자료구조 필요?}
+    B -->|중복 확인| C[unordered_set]
+    B -->|값-인덱스 매핑| D[unordered_map]
+    C --> E[O(n) 평균 처리]
+    D --> E
+    E --> F[정답 도출]
+```
+
+---
+
+## 1) `unordered_set` / `unordered_map` 먼저 이해하기
+
+### 1-1. unordered_set
+
+- **중복 없는 값 집합**
+- 값이 있는지 빠르게 확인할 때 사용
+- 평균적으로 `insert/find`가 `O(1)`
+
+예)
+```cpp
+unordered_set<int> s;
+s.insert(10);
+if (s.find(10) != s.end()) {
+    // 10이 존재함
+}
+```
+
+**언제 쓰나?**
+- 중복 체크
+- 방문 여부 체크
+
+---
+
+### 1-2. unordered_map
+
+- **key -> value** 매핑
+- 평균적으로 `insert/find`가 `O(1)`
+
+예)
+```cpp
+unordered_map<int, int> m;
+m[7] = 100; // key=7, value=100
+
+if (m.find(7) != m.end()) {
+    // key 7 존재
+}
+```
+
+**언제 쓰나?**
+- 숫자 등장 횟수(freq)
+- 값 -> 인덱스 저장
+
+---
+
+### 1-3. set/map랑 차이
+
+- `set/map`: 정렬됨 (보통 `O(log n)`)
+- `unordered_set/unordered_map`: 정렬 없음 (평균 `O(1)`)
+
+코테에서 빠른 조회가 필요하면 보통 `unordered_*`를 먼저 고려한다.
+
+---
+
+## 2) Day1 문제 풀이
 
 ### 2-1. Two Sum
 
-**아이디어**
-- `target - nums[i]`를 해시맵에서 찾는다.
-- 값 → 인덱스를 저장하면서 한 번 순회하면 된다.
+문제: 두 수 합이 target이 되는 인덱스 2개 찾기
+
+핵심 아이디어:
+- 현재 값 `x`를 볼 때 필요한 값은 `target - x`
+- 이전에 본 값들을 map에 저장해두면 즉시 확인 가능
+
+```mermaid
+flowchart TD
+    A[i번째 값 nums[i]] --> B[need = target - nums[i]]
+    B --> C{map에 need 존재?}
+    C -->|Yes| D[정답 = map[need], i]
+    C -->|No| E[map[nums[i]] = i 저장]
+    E --> F[다음 i]
+```
 
 ```cpp
 #include <vector>
@@ -52,7 +121,6 @@ public:
             }
             idx[nums[i]] = i;
         }
-
         return {};
     }
 };
@@ -65,8 +133,10 @@ public:
 
 ### 2-2. Contains Duplicate
 
-**아이디어**
-- `unordered_set`에 값을 넣으면서 이미 존재하면 `true`.
+문제: 배열에 중복 원소가 있는지 확인
+
+핵심 아이디어:
+- set에 넣기 전에 이미 있으면 중복
 
 ```cpp
 #include <vector>
@@ -82,7 +152,6 @@ public:
             if (seen.find(x) != seen.end()) return true;
             seen.insert(x);
         }
-
         return false;
     }
 };
@@ -95,9 +164,11 @@ public:
 
 ### 2-3. Valid Anagram
 
-**아이디어**
-- 길이가 다르면 바로 `false`.
-- 알파벳 카운트 배열(26칸)로 `+1/-1` 후 0인지 확인.
+문제: 두 문자열이 애너그램인지 확인
+
+핵심 아이디어:
+- 문자 개수가 같아야 함
+- 알파벳 개수 배열로 카운트
 
 ```cpp
 #include <string>
@@ -124,16 +195,26 @@ public:
 ```
 
 - 시간복잡도: `O(n)`
-- 공간복잡도: `O(1)` (고정 26)
+- 공간복잡도: `O(1)`
 
 ---
 
 ### 2-4. Top K Frequent Elements
 
-**아이디어**
-- 1) 숫자 빈도 계산
-- 2) 빈도를 인덱스로 쓰는 Bucket 생성
-- 3) 높은 빈도부터 내려오며 `k`개 수집
+문제: 가장 자주 나온 숫자 k개 반환
+
+핵심 아이디어:
+1. map으로 빈도 계산
+2. bucket(인덱스=빈도)에 넣기
+3. 높은 빈도부터 꺼내기
+
+```mermaid
+flowchart TD
+    A[nums 순회] --> B[freq map 생성]
+    B --> C[bucket[f]에 숫자 저장]
+    C --> D[n부터 1까지 역순 순회]
+    D --> E[k개 모이면 종료]
+```
 
 ```cpp
 #include <vector>
@@ -150,9 +231,7 @@ public:
         vector<vector<int>> bucket(n + 1);
 
         for (auto& p : freq) {
-            int num = p.first;
-            int f = p.second;
-            bucket[f].push_back(num);
+            bucket[p.second].push_back(p.first);
         }
 
         vector<int> ans;
@@ -172,10 +251,25 @@ public:
 
 ---
 
-## 3) C++ 클래스(OOP) 입문 - Student 예제
+## 3) OOP 기초 정리 - Student 클래스
 
-코테만 하다 보면 클래스 문법이 약해지기 쉬워서,
-아주 쉬운 `Student` 예제로 **캡슐화 + 생성자 + getter/setter**를 연습했다.
+클래스 학습 포인트:
+- 데이터는 `private`로 보호
+- 함수로만 접근 (`getter/setter`)
+- 생성자로 안전한 초기값 보장
+
+```mermaid
+classDiagram
+    class Student {
+        -string name
+        -int score
+        +Student(string n, int s)
+        +setScore(int s) void
+        +getScore() int
+        +getName() string
+        +printInfo() void
+    }
+```
 
 ```cpp
 #include <iostream>
@@ -188,27 +282,18 @@ private:
     int score;
 
 public:
-    // 생성자: 점수 범위 검증까지 같이 수행
-    Student(string n, int s) {
-        name = n;
-        score = (0 <= s && s <= 100) ? s : 0;
+    // 생성자에서 바로 검증
+    Student(string n, int s) : name(n), score(0) {
+        setScore(s);
     }
 
-    // setter: 유효한 점수만 반영
+    // 유효 범위(0~100)만 허용
     void setScore(int s) {
-        if (0 <= s && s <= 100) {
-            score = s;
-        }
+        if (0 <= s && s <= 100) score = s;
     }
 
-    // getter: 읽기 전용 접근
-    int getScore() const {
-        return score;
-    }
-
-    string getName() const {
-        return name;
-    }
+    int getScore() const { return score; }
+    string getName() const { return name; }
 
     void printInfo() const {
         cout << "Name: " << name << ", Score: " << score << '\n';
@@ -222,29 +307,24 @@ int main() {
     st.setScore(95);
     st.printInfo();
 
-    st.setScore(120); // 무시
+    st.setScore(120); // 무시됨
     st.printInfo();
 }
 ```
 
-### 이 예제로 익힌 포인트
-- 멤버 변수는 `private`로 숨기기 (캡슐화)
-- 생성자에서 초기 상태를 안전하게 만들기
-- setter에서 유효성 검증하기
-- `const` 멤버함수로 읽기 전용 보장하기
+---
+
+## 4) 오늘 꼭 기억할 포인트
+
+1. **조회/중복 확인**이 핵심이면 `unordered_set/map` 먼저 떠올리기
+2. 클래스는 처음부터 크게 만들지 말고, `Student`처럼 작은 예제로 시작하기
+3. 코테는 정답보다도 **왜 이 자료구조를 썼는지 설명할 수 있어야 함**
 
 ---
 
-## 4) 오늘 회고
+## 다음 단계
 
-- `unordered_map / unordered_set`를 쓰는 패턴은 확실히 손에 익혀야 한다.
-- Easy라도 **직접 타이핑**으로 풀어야 실수가 줄어든다.
-- OOP는 거창하게 시작하기보다, 작은 클래스 하나를 완성하는 방식이 훨씬 학습 효율이 좋다.
+- Day2: Two Pointers / String 2문제
+- OOP: `BankAccount` 예제로 메서드 설계 + 예외 케이스 처리
 
-다음 목표는:
-- LeetCode Day2 (Two Pointers / String)
-- 클래스 심화: 생성자 초기화 리스트, 참조, 소멸자 기초
-
----
-
-필요하면 다음 글에서 Day2도 같은 포맷으로 이어서 정리해보겠다.
+원하면 다음 글에서 Day2도 그림 포함으로 이어서 정리하겠다.
