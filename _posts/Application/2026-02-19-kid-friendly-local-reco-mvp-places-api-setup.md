@@ -2,9 +2,10 @@
 title: 영유아 동반 부모용 로컬 추천앱 MVP 기획 및 Places API 연동 정리
 author: JaeHa
 date: 2026-02-19 13:20:00 -0800
-categories: [Blogging, POC]
-tags: [MVP, Places API, Google Maps, 기획, FastAPI, Flutter]
+categories: [Application]
+tags: [App, MVP, Places API, Google Maps, 기획, FastAPI, Flutter]
 pin: false
+published: false
 ---
 
 이번 세션에서는 **영유아 동반 부모를 위한 주변 카페/식당 추천 앱**의 MVP 범위를 정하고,
