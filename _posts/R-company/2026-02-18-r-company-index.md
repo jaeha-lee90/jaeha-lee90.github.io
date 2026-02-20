@@ -15,6 +15,8 @@ pin: true
 2. [X5H Fusion POC 아키텍처 정리](/posts/x5h-fusion-poc-architecture/)
 3. [R사 X5H Fusion POC Repo Study Notes](/posts/renesas-x5h-repo-study-notes/)
 4. [R사 X5H 코드 분석 Day 1 - Boot chain/IPL/firmware 흐름](/posts/r-company-x5h-day1-boot-chain-ipl-firmware/)
+5. [R사 X5H Day2 - android-manifest 프로젝트 맵핑 스터디](/posts/r-company-x5h-day2-android-manifest-project-map/)
+6. [R사 X5H Day3 - android-kernel-manifest와 Xen 모듈 체인 분석](/posts/r-company-x5h-day3-kernel-manifest-xen-module-chain/)
 
 ## 운영 원칙
 
