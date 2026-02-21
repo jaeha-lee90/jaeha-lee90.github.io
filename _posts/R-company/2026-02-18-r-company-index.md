@@ -17,6 +17,7 @@ pin: true
 4. [R사 X5H 코드 분석 Day 1 - Boot chain/IPL/firmware 흐름](/posts/r-company-x5h-day1-boot-chain-ipl-firmware/)
 5. [R사 X5H Day2 - android-manifest 프로젝트 맵핑 스터디](/posts/r-company-x5h-day2-android-manifest-project-map/)
 6. [R사 X5H Day3 - android-kernel-manifest와 Xen 모듈 체인 분석](/posts/r-company-x5h-day3-kernel-manifest-xen-module-chain/)
+7. [R사 X5H Day4 - Manifest 책임 매트릭스와 벤더 모듈 로딩 경로](/posts/r-company-x5h-day4-manifest-responsibility-matrix-module-loading/)
 
 ## 운영 원칙
 
