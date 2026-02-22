@@ -196,6 +196,41 @@ html[data-mode='dark'] .home-hero {
   border-color: #f5da9a;
 }
 
+#avatar {
+  border-radius: 50%;
+  border: 3px solid #fff;
+  box-shadow: 0 8px 22px rgba(47, 92, 255, 0.25);
+}
+
+#sidebar .site-title {
+  font-weight: 800;
+  letter-spacing: 0.01em;
+}
+
+.hero-actions .btn-primary {
+  background: linear-gradient(135deg, #2f5cff, #5a7bff);
+  border: none;
+  color: #fff;
+}
+
+.hero-actions .btn-outline {
+  border: 1px solid var(--main-border-color);
+  background: rgba(255, 255, 255, 0.65);
+}
+
+html[data-mode='dark'] .hero-actions .btn-outline {
+  background: rgba(18, 24, 39, 0.68);
+}
+
+.post-card-v2 h2 a {
+  line-height: 1.35;
+}
+
+.post-card-v2 .post-meta {
+  margin-top: 0.7rem;
+  font-size: 0.86rem;
+}
+
 @media (max-width: 992px) {
   .post-grid,
   .home-stats {
