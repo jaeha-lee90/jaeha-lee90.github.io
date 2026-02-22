@@ -3,12 +3,9 @@ layout: page
 # The Home page layout
 ---
 
-
 {% assign pinned = site.posts | where_exp: "item", "item.pin == true"  %}
 {% assign default = site.posts | where_exp: "item", "item.pin != true"  %}
 {% assign posts = "" | split: "" %}
-
-<!-- Get pinned posts -->
 
 {% assign offset = paginator.page | minus: 1 | times: paginator.per_page %}
 {% assign pinned_num = pinned.size | minus: offset %}
@@ -21,16 +18,12 @@ layout: page
   {% assign pinned_num = 0 %}
 {% endif %}
 
-
-<!-- Get default posts -->
-
 {% assign default_beg = offset | minus: pinned.size %}
-
 {% if default_beg < 0 %}
   {% assign default_beg = 0 %}
 {% endif %}
 
-{% assign default_num = paginator.posts | size | minus: pinned_num  %}
+{% assign default_num = paginator.posts | size | minus: pinned_num %}
 {% assign default_end = default_beg | plus: default_num | minus: 1 %}
 
 {% if default_num > 0 %}
@@ -39,57 +32,80 @@ layout: page
   {% endfor %}
 {% endif %}
 
+{% assign latest = site.posts.first %}
 
-<div id="post-list">
-
-{% for post in posts %}
-
-  <div class="post-preview">
-    <h1>
-      <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-    </h1>
-
-    <div class="post-content">
-      <p>
-        {% include no-linenos.html content=post.content %}
-        {{ content | markdownify | strip_html | truncate: 200 }}
-      </p>
+<section class="home-hero">
+  <div class="hero-glow"></div>
+  <div class="hero-content">
+    <p class="hero-kicker">JAEHA LAB</p>
+    <h1>Embedded Engineering Notes & Build Logs</h1>
+    <p class="hero-desc">
+      자율주행/IVI/플랫폼 bring-up 실무에서 바로 쓰는 기록들. 분석은 깊게, 요약은 빠르게.
+    </p>
+    <div class="hero-actions">
+      {% if latest %}
+        <a class="btn btn-primary" href="{{ latest.url | relative_url }}">최신 글 읽기</a>
+      {% endif %}
+      <a class="btn btn-outline" href="{{ '/archives/' | relative_url }}">전체 아카이브</a>
     </div>
+  </div>
+</section>
 
-    <div class="post-meta text-muted d-flex justify-content-between">
+<section class="home-stats">
+  <div class="stat-card">
+    <span class="label">Posts</span>
+    <strong>{{ site.posts | size }}</strong>
+  </div>
+  <div class="stat-card">
+    <span class="label">Categories</span>
+    <strong>{{ site.categories | size }}</strong>
+  </div>
+  <div class="stat-card">
+    <span class="label">Tags</span>
+    <strong>{{ site.tags | size }}</strong>
+  </div>
+</section>
 
-      <div>
-        <!-- posted date -->
-        <i class="far fa-calendar fa-fw"></i>
-        {% include timeago.html date=post.date tooltip=true %}
+<div class="section-head">
+  <h2>Latest Posts</h2>
+  <a href="{{ '/categories/' | relative_url }}">카테고리 보기 →</a>
+</div>
 
-        <!-- time to read -->
-        <i class="far fa-clock fa-fw"></i>
-        {% include read-time.html content=post.content %}
-
-        <!-- page views -->
-        {% if site.google_analytics.pv.enabled %}
-        <i class="far fa-eye fa-fw"></i>
-        <span id="pv_{{-post.title-}}" class="pageviews">
-          <i class="fas fa-spinner fa-spin fa-fw"></i>
-        </span>
+<div id="post-list" class="post-grid">
+  {% for post in posts %}
+    <article class="post-preview post-card-v2">
+      <div class="post-card-top">
+        {% if post.categories and post.categories.size > 0 %}
+          <span class="chip">{{ post.categories.first }}</span>
+        {% endif %}
+        {% if post.pin %}
+          <span class="chip chip-pin">Pinned</span>
         {% endif %}
       </div>
 
-      {% if post.pin %}
-      <div class="pin">
-        <i class="fas fa-thumbtack fa-fw"></i>
-        <span>{{ site.data.label.pin_prompt | default: 'Pinned' }}</span>
+      <h2>
+        <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+      </h2>
+
+      <div class="post-content">
+        <p>
+          {% include no-linenos.html content=post.content %}
+          {{ content | markdownify | strip_html | truncate: 170 }}
+        </p>
       </div>
-      {% endif %}
 
-    </div> <!-- .post-meta -->
+      <div class="post-meta text-muted d-flex justify-content-between">
+        <div>
+          <i class="far fa-calendar fa-fw"></i>
+          {% include timeago.html date=post.date tooltip=true %}
 
-  </div> <!-- .post-review -->
-
-{% endfor %}
-
-</div> <!-- #post-list -->
+          <i class="far fa-clock fa-fw"></i>
+          {% include read-time.html content=post.content %}
+        </div>
+      </div>
+    </article>
+  {% endfor %}
+</div>
 
 {% if paginator.total_pages > 0 %}
   {% include post-paginator.html %}
