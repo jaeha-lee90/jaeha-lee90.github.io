@@ -19,6 +19,7 @@ pin: true
 6. [R사 X5H Day3 - android-kernel-manifest와 Xen 모듈 체인 분석](/posts/r-company-x5h-day3-kernel-manifest-xen-module-chain/)
 7. [R사 X5H Day4 - Manifest 책임 매트릭스와 벤더 모듈 로딩 경로](/posts/r-company-x5h-day4-manifest-responsibility-matrix-module-loading/)
 8. [R사 X5H Day5 - android_device init/ueventd/BoardConfig 브링업 크리티컬 포인트](/posts/r-company-x5h-day5-android-device-init-ueventd-boardconfig/)
+9. [R사 X5H Day6 - 기본 부팅 실패 포인트 체크리스트](/posts/r-company-x5h-day6-boot-failure-points-checklist/)
 
 ## 운영 원칙
 
