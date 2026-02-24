@@ -20,6 +20,7 @@ pin: true
 7. [R사 X5H Day4 - Manifest 책임 매트릭스와 벤더 모듈 로딩 경로](/posts/r-company-x5h-day4-manifest-responsibility-matrix-module-loading/)
 8. [R사 X5H Day5 - android_device init/ueventd/BoardConfig 브링업 크리티컬 포인트](/posts/r-company-x5h-day5-android-device-init-ueventd-boardconfig/)
 9. [R사 X5H Day6 - 기본 부팅 실패 포인트 체크리스트](/posts/r-company-x5h-day6-boot-failure-points-checklist/)
+10. [R사 X5H Day7 - 1주차 요약과 브링업 트리아지 체크리스트](/posts/r-company-x5h-day7-week1-summary-triage-checklist/)
 
 ## 운영 원칙
 
