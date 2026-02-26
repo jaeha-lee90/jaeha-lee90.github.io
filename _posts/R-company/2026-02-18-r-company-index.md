@@ -22,6 +22,7 @@ pin: true
 9. [R사 X5H Day6 - 기본 부팅 실패 포인트 체크리스트](/posts/r-company-x5h-day6-boot-failure-points-checklist/)
 10. [R사 X5H Day7 - 1주차 요약과 브링업 트리아지 체크리스트](/posts/r-company-x5h-day7-week1-summary-triage-checklist/)
 11. [R사 X5H Day8 - ddk-km 구조와 핵심 모듈 의존 관계](/posts/r-company-x5h-day8-ddk-km-core-modules-dependency/)
+12. [R사 X5H Day9 - ddk-um-bin 의존성과 KM/UM 버전 정합 실패 패턴](/posts/r-company-x5h-day9-ddk-um-bin-dependency-version-compatibility/)
 
 ## 운영 원칙
 
