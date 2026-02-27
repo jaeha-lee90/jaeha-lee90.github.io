@@ -23,6 +23,7 @@ pin: true
 10. [R사 X5H Day7 - 1주차 요약과 브링업 트리아지 체크리스트](/posts/r-company-x5h-day7-week1-summary-triage-checklist/)
 11. [R사 X5H Day8 - ddk-km 구조와 핵심 모듈 의존 관계](/posts/r-company-x5h-day8-ddk-km-core-modules-dependency/)
 12. [R사 X5H Day9 - ddk-um-bin 의존성과 KM/UM 버전 정합 실패 패턴](/posts/r-company-x5h-day9-ddk-um-bin-dependency-version-compatibility/)
+13. [R사 X5H Day10 - disfwk_fe 인터페이스/초기 표시 경로 분석](/posts/r-company-x5h-day10-disfwk-fe-interface-flow/)
 
 ## 운영 원칙
 
