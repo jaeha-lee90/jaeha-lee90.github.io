@@ -25,6 +25,7 @@ pin: true
 12. [R사 X5H Day9 - ddk-um-bin 의존성과 KM/UM 버전 정합 실패 패턴](/posts/r-company-x5h-day9-ddk-um-bin-dependency-version-compatibility/)
 13. [R사 X5H Day10 - disfwk_fe 인터페이스/초기 표시 경로 분석](/posts/r-company-x5h-day10-disfwk-fe-interface-flow/)
 14. [R사 X5H Day11 - Display Ownership (DomD vs DomA) 경계 고정](/posts/r-company-x5h-day11-display-ownership-domd-vs-doma/)
+15. [R사 X5H Day12 - Display 성능 병목 후보 (Copy/Sync)](/posts/r-company-x5h-day12-copy-sync-bottleneck-candidates/)
 
 ## 운영 원칙
 
