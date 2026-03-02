@@ -26,6 +26,7 @@ pin: true
 13. [R사 X5H Day10 - disfwk_fe 인터페이스/초기 표시 경로 분석](/posts/r-company-x5h-day10-disfwk-fe-interface-flow/)
 14. [R사 X5H Day11 - Display Ownership (DomD vs DomA) 경계 고정](/posts/r-company-x5h-day11-display-ownership-domd-vs-doma/)
 15. [R사 X5H Day12 - Display 성능 병목 후보 (Copy/Sync)](/posts/r-company-x5h-day12-copy-sync-bottleneck-candidates/)
+16. [R사 X5H Day13 - 디버깅 포인트와 로그 전략](/posts/r-company-x5h-day13-debug-points-log-strategy/)
 
 ## 운영 원칙
 
