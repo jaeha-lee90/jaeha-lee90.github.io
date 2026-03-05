@@ -27,6 +27,7 @@ pin: true
 14. [R사 X5H Day11 - Display Ownership (DomD vs DomA) 경계 고정](/posts/r-company-x5h-day11-display-ownership-domd-vs-doma/)
 15. [R사 X5H Day12 - Display 성능 병목 후보 (Copy/Sync)](/posts/r-company-x5h-day12-copy-sync-bottleneck-candidates/)
 16. [R사 X5H Day13 - 디버깅 포인트와 로그 전략](/posts/r-company-x5h-day13-debug-points-log-strategy/)
+17. [R사 X5H Day14 - 2주차 요약: 브링업 게이트와 우선 수정축](/posts/r-company-x5h-day14-week2-summary-bringup-gate/)
 
 ## 운영 원칙
 
