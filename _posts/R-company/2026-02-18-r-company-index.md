@@ -29,6 +29,7 @@ pin: true
 16. [R사 X5H Day13 - 디버깅 포인트와 로그 전략](/posts/r-company-x5h-day13-debug-points-log-strategy/)
 17. [R사 X5H Day14 - 2주차 요약: 브링업 게이트와 우선 수정축](/posts/r-company-x5h-day14-week2-summary-bringup-gate/)
 18. [R사 X5H Day15 - Virtio 채널 맵 정리 (blk/net/serial/audio)](/posts/r-company-x5h-day15-virtio-channel-map-blk-net-serial-audio/)
+19. [R사 X5H Day16 - DomD 서비스 책임 경계 (소유 채널/재시작 범위/실패 전파)](/posts/r-company-x5h-day16-domd-service-ownership-restart-failure-propagation/)
 
 ## 운영 원칙
 
