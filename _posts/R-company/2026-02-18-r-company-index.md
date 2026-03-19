@@ -33,6 +33,7 @@ pin: true
 20. [R사 X5H Day17 - 채널 실패 주입 시나리오와 전파 레벨 SLO](/posts/r-company-x5h-day17-channel-failure-injection-propagation-slo/)
 21. [R사 X5H Day18 - 복구시간 계측 훅 표준화 (Launcher/Healthcheck)](/posts/r-company-x5h-day18-recovery-metrics-hook-healthcheck-launcher/)
 22. [R사 X5H Day19 - 채널별 복구시간 기준선 수립 (p95 Baseline)](/posts/r-company-x5h-day19-channel-baseline-p95-calibration/)
+23. [R사 X5H Day20 - Fault Taxonomy 표준화와 주입 커버리지 고정](/posts/r-company-x5h-day20-fault-taxonomy-injection-coverage/)
 
 ## 운영 원칙
 
