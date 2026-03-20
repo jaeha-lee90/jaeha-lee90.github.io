@@ -34,6 +34,7 @@ pin: true
 21. [R사 X5H Day18 - 복구시간 계측 훅 표준화 (Launcher/Healthcheck)](/posts/r-company-x5h-day18-recovery-metrics-hook-healthcheck-launcher/)
 22. [R사 X5H Day19 - 채널별 복구시간 기준선 수립 (p95 Baseline)](/posts/r-company-x5h-day19-channel-baseline-p95-calibration/)
 23. [R사 X5H Day20 - Fault Taxonomy 표준화와 주입 커버리지 고정](/posts/r-company-x5h-day20-fault-taxonomy-injection-coverage/)
+24. [R사 X5H Day21 - 3주차 요약: Recovery Gate Hardening](/posts/r-company-x5h-day21-week3-summary-recovery-gate-hardening/)
 
 ## 운영 원칙
 
