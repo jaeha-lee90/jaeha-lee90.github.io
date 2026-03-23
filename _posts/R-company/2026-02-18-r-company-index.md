@@ -36,6 +36,7 @@ pin: true
 23. [R사 X5H Day20 - Fault Taxonomy 표준화와 주입 커버리지 고정](/posts/r-company-x5h-day20-fault-taxonomy-injection-coverage/)
 24. [R사 X5H Day21 - 3주차 요약: Recovery Gate Hardening](/posts/r-company-x5h-day21-week3-summary-recovery-gate-hardening/)
 25. [R사 X5H Day22 - meta-xt-gen5-platform 빌드 흐름과 실패 절단면](/posts/r-company-x5h-day22-meta-xt-gen5-platform-build-flow/)
+26. [R사 X5H Day23 - meta-xt-x5h-dev 오버레이 경계와 우선순위 충돌 제어](/posts/r-company-x5h-day23-meta-xt-x5h-dev-overlay-boundary/)
 
 ## 운영 원칙
 
