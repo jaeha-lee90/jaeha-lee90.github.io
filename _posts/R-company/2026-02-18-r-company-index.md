@@ -37,6 +37,7 @@ pin: true
 24. [R사 X5H Day21 - 3주차 요약: Recovery Gate Hardening](/posts/r-company-x5h-day21-week3-summary-recovery-gate-hardening/)
 25. [R사 X5H Day22 - meta-xt-gen5-platform 빌드 흐름과 실패 절단면](/posts/r-company-x5h-day22-meta-xt-gen5-platform-build-flow/)
 26. [R사 X5H Day23 - meta-xt-x5h-dev 오버레이 경계와 우선순위 충돌 제어](/posts/r-company-x5h-day23-meta-xt-x5h-dev-overlay-boundary/)
+27. [R사 X5H Day24 - 산출물(full.img/android_only.img) 관리와 재현성 게이트](/posts/r-company-x5h-day24-image-artifact-full-android-only-governance/)
 
 ## 운영 원칙
 
