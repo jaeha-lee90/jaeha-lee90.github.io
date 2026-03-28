@@ -40,6 +40,7 @@ pin: true
 27. [R사 X5H Day24 - 산출물(full.img/android_only.img) 관리와 재현성 게이트](/posts/r-company-x5h-day24-image-artifact-full-android-only-governance/)
 28. [R사 X5H Day25 - 브랜치/태그 운영 정책과 이미지 등급 게이팅](/posts/r-company-x5h-day25-branch-tag-policy-image-grade/)
 29. [R사 X5H Day26 - CI 게이트 DAG와 이미지 승격 제어면 고정](/posts/r-company-x5h-day26-ci-gate-dag-promotion-control/)
+30. [R사 X5H Day27 - Boot-smoke/Healthcheck SLO 임계치 고정](/posts/r-company-x5h-day27-boot-smoke-healthcheck-slo-thresholds/)
 
 ## 운영 원칙
 
