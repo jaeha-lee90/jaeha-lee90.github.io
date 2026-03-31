@@ -43,6 +43,7 @@ pin: true
 30. [R사 X5H Day27 - Boot-smoke/Healthcheck SLO 임계치 고정](/posts/r-company-x5h-day27-boot-smoke-healthcheck-slo-thresholds/)
 31. [R사 X5H Day28 - 4주차 요약: SLO 운영 규칙과 Override 거버넌스](/posts/r-company-x5h-day28-week4-summary-slo-operations-override-governance/)
 32. [R사 X5H Day29 - 최종 리스크 레지스터와 릴리스 준비도 판정](/posts/r-company-x5h-day29-final-risk-register-release-readiness/)
+33. [R사 X5H Day30 - 브링업·게이트·운영 SOP 단일화](/posts/r-company-x5h-day30-final-bringup-gate-operations-sop/)
 
 ## 운영 원칙
 
