@@ -46,6 +46,7 @@ pin: true
 33. [R사 X5H Day30 - 브링업·게이트·운영 SOP 단일화](/posts/r-company-x5h-day30-final-bringup-gate-operations-sop/)
 34. [R사 X5H Day31 - 부팅 Timeout/Watchdog 복구 계약 고정](/posts/r-company-x5h-day31-boot-timeout-watchdog-recovery-contract/)
 35. [R사 X5H Day32 - fstab/first-stage mount/verity 브링업 게이트 고정](/posts/r-company-x5h-day32-fstab-first-stage-mount-verity-bringup-gate/)
+36. [R사 X5H Day33 - early-init SELinux/property/service 브링업 게이트](/posts/r-company-x5h-day33-early-init-sepolicy-property-service-gate/)
 
 ## 운영 원칙
 
