@@ -50,6 +50,7 @@ pin: true
 37. [R사 X5H Day34 - VINTF/HAL 등록 게이트와 servicemanager 부팅 차단면](/posts/r-company-x5h-day34-vintf-hal-registration-gate/)
 38. [R사 X5H Day35 - Zygote/SystemServer 부팅 완료 게이트와 framework ready 차단면](/posts/r-company-x5h-day35-zygote-systemserver-boot-complete-gate/)
 39. [R사 X5H Day36 - Native Crashloop/Tombstone/Restart Budget 안정화 게이트](/posts/r-company-x5h-day36-native-crashloop-tombstone-restart-budget/)
+40. [R사 X5H Day37 - ANR/Watchdog/Binder Starvation 부팅 후 안정화 게이트](/posts/r-company-x5h-day37-anr-watchdog-binder-starvation-gate/)
 
 ## 운영 원칙
 
