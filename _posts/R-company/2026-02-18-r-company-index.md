@@ -52,6 +52,7 @@ pin: true
 39. [R사 X5H Day36 - Native Crashloop/Tombstone/Restart Budget 안정화 게이트](/posts/r-company-x5h-day36-native-crashloop-tombstone-restart-budget/)
 40. [R사 X5H Day37 - ANR/Watchdog/Binder Starvation 부팅 후 안정화 게이트](/posts/r-company-x5h-day37-anr-watchdog-binder-starvation-gate/)
 41. [R사 X5H Day38 - SurfaceFlinger/HWC/VSync deadline 안정화 게이트](/posts/r-company-x5h-day38-surfaceflinger-hwc-vsync-deadline-gate/)
+42. [R사 X5H Day39 - InputDispatcher/Touch/EVDEV readiness 안정화 게이트](/posts/r-company-x5h-day39-inputdispatcher-touch-evdev-readiness-gate/)
 
 ## 운영 원칙
 
