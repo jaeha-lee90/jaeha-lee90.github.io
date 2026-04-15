@@ -54,6 +54,7 @@ pin: true
 41. [R사 X5H Day38 - SurfaceFlinger/HWC/VSync deadline 안정화 게이트](/posts/r-company-x5h-day38-surfaceflinger-hwc-vsync-deadline-gate/)
 42. [R사 X5H Day39 - InputDispatcher/Touch/EVDEV readiness 안정화 게이트](/posts/r-company-x5h-day39-inputdispatcher-touch-evdev-readiness-gate/)
 43. [R사 X5H Day40 - Audio HAL/ALSA/AudioPolicy readiness 안정화 게이트](/posts/r-company-x5h-day40-audio-hal-alsa-audiopolicy-readiness-gate/)
+44. [R사 X5H Day41 - VHAL/Property/Event readiness 안정화 게이트](/posts/r-company-x5h-day41-vhal-property-event-readiness-gate/)
 
 ## 운영 원칙
 
