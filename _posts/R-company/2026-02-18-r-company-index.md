@@ -56,6 +56,7 @@ pin: true
 43. [R사 X5H Day40 - Audio HAL/ALSA/AudioPolicy readiness 안정화 게이트](/posts/r-company-x5h-day40-audio-hal-alsa-audiopolicy-readiness-gate/)
 44. [R사 X5H Day41 - VHAL/Property/Event readiness 안정화 게이트](/posts/r-company-x5h-day41-vhal-property-event-readiness-gate/)
 45. [R사 X5H Day42 - PowerHAL/Thermal/Performance Hint readiness 안정화 게이트](/posts/r-company-x5h-day42-powerhal-thermal-perfhint-readiness-gate/)
+46. [R사 X5H Day43 - Suspend/Resume Wake Source/State Retention 안정화 게이트](/posts/r-company-x5h-day43-suspend-resume-wakesource-state-retention-gate/)
 
 ## 운영 원칙
 
