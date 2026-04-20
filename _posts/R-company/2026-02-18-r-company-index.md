@@ -59,6 +59,7 @@ pin: true
 46. [R사 X5H Day43 - Suspend/Resume Wake Source/State Retention 안정화 게이트](/posts/r-company-x5h-day43-suspend-resume-wakesource-state-retention-gate/)
 47. [R사 X5H Day44 - Camera HAL/Provider/Stream Pipeline readiness 안정화 게이트](/posts/r-company-x5h-day44-camera-hal-provider-stream-readiness-gate/)
 48. [R사 X5H Day45 - Wi-Fi/Bluetooth Firmware/NVRAM readiness 안정화 게이트](/posts/r-company-x5h-day45-wifi-bt-firmware-nvram-readiness-gate/)
+49. [R사 X5H Day46 - USB Role Switch/ADB/Peripheral Enumeration readiness 안정화 게이트](/posts/r-company-x5h-day46-usb-role-switch-adb-peripheral-readiness-gate/)
 
 ## 운영 원칙
 
