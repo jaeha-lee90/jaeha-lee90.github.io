@@ -60,6 +60,7 @@ pin: true
 47. [R사 X5H Day44 - Camera HAL/Provider/Stream Pipeline readiness 안정화 게이트](/posts/r-company-x5h-day44-camera-hal-provider-stream-readiness-gate/)
 48. [R사 X5H Day45 - Wi-Fi/Bluetooth Firmware/NVRAM readiness 안정화 게이트](/posts/r-company-x5h-day45-wifi-bt-firmware-nvram-readiness-gate/)
 49. [R사 X5H Day46 - USB Role Switch/ADB/Peripheral Enumeration readiness 안정화 게이트](/posts/r-company-x5h-day46-usb-role-switch-adb-peripheral-readiness-gate/)
+50. [R사 X5H Day47 - Ethernet PHY/MAC/DHCP/Link Stability readiness 안정화 게이트](/posts/r-company-x5h-day47-ethernet-phy-mac-dhcp-link-readiness-gate/)
 
 ## 운영 원칙
 
