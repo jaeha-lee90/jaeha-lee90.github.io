@@ -65,6 +65,7 @@ pin: true
 52. [R사 X5H Day49 - pstore/ramoops/Reboot Reason crash evidence readiness 안정화 게이트](/posts/r-company-x5h-day49-pstore-ramoops-reboot-reason-crash-evidence-readiness-gate/)
 53. [R사 X5H Day50 - Boot Count/Boot Success/A-B Rollback readiness 안정화 게이트](/posts/r-company-x5h-day50-bootcount-boot-success-ab-rollback-readiness-gate/)
 54. [R사 X5H Day51 - persist/pdata 상태 보존 계약과 재부팅 간 판정 일관성](/posts/r-company-x5h-day51-persist-pdata-state-retention-contract/)
+55. [R사 X5H Day52 - Boot Stage Watermark/Health Verdict/Event 로그 단일 타임라인 정렬 규칙](/posts/r-company-x5h-day52-boot-stage-watermark-health-timeline-alignment/)
 
 ## 운영 원칙
 
