@@ -67,6 +67,7 @@ pin: true
 54. [R사 X5H Day51 - persist/pdata 상태 보존 계약과 재부팅 간 판정 일관성](/posts/r-company-x5h-day51-persist-pdata-state-retention-contract/)
 55. [R사 X5H Day52 - Boot Stage Watermark/Health Verdict/Event 로그 단일 타임라인 정렬 규칙](/posts/r-company-x5h-day52-boot-stage-watermark-health-timeline-alignment/)
 56. [R사 X5H Day53 - Service Critical Path Deadline Budget와 Timeout Ownership 분리 규칙](/posts/r-company-x5h-day53-service-deadline-budget-timeout-ownership/)
+57. [R사 X5H Day54 - Service Restart Budget와 Crashloop Escalation 임계치 표준화](/posts/r-company-x5h-day54-service-restart-budget-crashloop-escalation/)
 
 ## 운영 원칙
 
