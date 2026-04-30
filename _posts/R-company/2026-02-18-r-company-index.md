@@ -69,6 +69,7 @@ pin: true
 56. [R사 X5H Day53 - Service Critical Path Deadline Budget와 Timeout Ownership 분리 규칙](/posts/r-company-x5h-day53-service-deadline-budget-timeout-ownership/)
 57. [R사 X5H Day54 - Service Restart Budget와 Crashloop Escalation 임계치 표준화](/posts/r-company-x5h-day54-service-restart-budget-crashloop-escalation/)
 58. [R사 X5H Day55 - Service Criticality Class와 Reboot Authority Matrix 표준화](/posts/r-company-x5h-day55-service-criticality-class-reboot-authority-matrix/)
+59. [R사 X5H Day56 - Failure Instance ID와 Cross-layer Recovery Ledger 표준화](/posts/r-company-x5h-day56-failure-instance-id-cross-layer-recovery-ledger/)
 
 ## 운영 원칙
 
