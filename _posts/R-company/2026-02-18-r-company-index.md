@@ -70,6 +70,9 @@ pin: true
 57. [R사 X5H Day54 - Service Restart Budget와 Crashloop Escalation 임계치 표준화](/posts/r-company-x5h-day54-service-restart-budget-crashloop-escalation/)
 58. [R사 X5H Day55 - Service Criticality Class와 Reboot Authority Matrix 표준화](/posts/r-company-x5h-day55-service-criticality-class-reboot-authority-matrix/)
 59. [R사 X5H Day56 - Failure Instance ID와 Cross-layer Recovery Ledger 표준화](/posts/r-company-x5h-day56-failure-instance-id-cross-layer-recovery-ledger/)
+60. [R사 X5H Day57 - Camera to Android Display 가상화 아키텍처 분해](/posts/r-company-x5h-day57-camera-to-android-display-virtualized-architecture/)
+61. [R사 X5H Day58 - Camera Bring-up Debug Checklist](/posts/r-company-x5h-day58-camera-bringup-debug-checklist/)
+62. [R사 X5H Day59 - Display Bring-up Debug Checklist](/posts/r-company-x5h-day59-display-bringup-debug-checklist/)
 
 ## 운영 원칙
 
