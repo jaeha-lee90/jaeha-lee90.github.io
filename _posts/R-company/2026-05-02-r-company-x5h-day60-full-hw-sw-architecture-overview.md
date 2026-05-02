@@ -24,32 +24,32 @@ Day50~Day59에서 boot success → state retention → 서비스 deadline → re
 
 ### 0-1. HW SoC 자체가 비대칭 멀티코어
 
-<object data="/assets/img/r-company/x5h-day60-diagram-01.png" type="image/png" aria-label="X5H Day60 diagram 1" style="width:100%; height:auto; border-radius:12px; margin:12px 0 20px;"></object>
+![X5H Day60 diagram 1](/assets/img/r-company/x5h-day60-diagram-01.png)
 
 
 ### 0-2. Boot chain — 누가 먼저 깨어나는가
 
-<object data="/assets/img/r-company/x5h-day60-diagram-02.png" type="image/png" aria-label="X5H Day60 diagram 2" style="width:100%; height:auto; border-radius:12px; margin:12px 0 20px;"></object>
+![X5H Day60 diagram 2](/assets/img/r-company/x5h-day60-diagram-02.png)
 
 
 ### 0-3. Xen 4도메인 분할
 
-<object data="/assets/img/r-company/x5h-day60-diagram-03.png" type="image/png" aria-label="X5H Day60 diagram 3" style="width:100%; height:auto; border-radius:12px; margin:12px 0 20px;"></object>
+![X5H Day60 diagram 3](/assets/img/r-company/x5h-day60-diagram-03.png)
 
 
 ### 0-4. CR52 SW 스택 (rcar-xos SDK v4.31)
 
-<object data="/assets/img/r-company/x5h-day60-diagram-04.png" type="image/png" aria-label="X5H Day60 diagram 4" style="width:100%; height:auto; border-radius:12px; margin:12px 0 20px;"></object>
+![X5H Day60 diagram 4](/assets/img/r-company/x5h-day60-diagram-04.png)
 
 
 ### 0-5. Cross-domain 데이터 패스 (Display / Camera / GPU)
 
-<object data="/assets/img/r-company/x5h-day60-diagram-05.png" type="image/png" aria-label="X5H Day60 diagram 5" style="width:100%; height:auto; border-radius:12px; margin:12px 0 20px;"></object>
+![X5H Day60 diagram 5](/assets/img/r-company/x5h-day60-diagram-05.png)
 
 
 ### 0-6. 11개 레포 → 6개 역할 박스
 
-<object data="/assets/img/r-company/x5h-day60-diagram-06.png" type="image/png" aria-label="X5H Day60 diagram 6" style="width:100%; height:auto; border-radius:12px; margin:12px 0 20px;"></object>
+![X5H Day60 diagram 6](/assets/img/r-company/x5h-day60-diagram-06.png)
 
 
 ## 코드 포인트
