@@ -24,7 +24,7 @@ jobs:
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: '2.7'
+          ruby-version: '3.2'
 
       - name: Bundle Caching
         uses: actions/cache@v4
@@ -37,7 +37,7 @@ jobs:
       - name: Bundle Install
         run: |
           bundle config path ${{ env.GEMS_PATH }}
-          bundle install --jobs 4 --retry 3
+          bundle _2.6.9_ install --jobs 4 --retry 3
 
       - name: Check baseurl
         run: |
@@ -50,7 +50,7 @@ jobs:
         env:
           JEKYLL_ENV: production
         run: |
-          bundle exec jekyll b -d "_site$BASE_URL"
+          bundle _2.6.9_ exec jekyll b -d "_site$BASE_URL"
 
       - name: Deploy
         run: |
