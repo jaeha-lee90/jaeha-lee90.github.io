@@ -73,6 +73,8 @@ pin: true
 60. [R사 X5H Day57 - Camera to Android Display 가상화 아키텍처 분해](/posts/r-company-x5h-day57-camera-to-android-display-virtualized-architecture/)
 61. [R사 X5H Day58 - Camera Bring-up Debug Checklist](/posts/r-company-x5h-day58-camera-bringup-debug-checklist/)
 62. [R사 X5H Day59 - Display Bring-up Debug Checklist](/posts/r-company-x5h-day59-display-bringup-debug-checklist/)
+63. [R사 X5H Day60 - 전체 HW/SW 아키텍처 정리 (Boot, Xen 멀티도메인, CR52 rcar-xos, Android Trout-XenVM)](/posts/r-company-x5h-day60-full-hw-sw-architecture-overview/)
+64. [R사 X5H Day61 - Secure Boot Chain Anchor와 인증 경계](/posts/r-company-x5h-day61-secure-boot-chain-anchor-attestation-boundary/)
 
 ## 운영 원칙
 
