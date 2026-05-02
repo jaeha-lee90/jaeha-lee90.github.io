@@ -1,0 +1,24 @@
+flowchart TB
+    subgraph HW["HW / scanout owner boundary"]
+        SCN["Display controller / scanout"] --> PNL["Panel / bridge / link"]
+    end
+
+    subgraph LNX["Linux / DomD"]
+        D1["disfwk_fe open"] --> D2["Connector / CRTC / Plane selection"] --> D3["Framebuffer registration"] --> D4["Atomic commit"]
+    end
+
+    subgraph AND["Android / DomA"]
+        A3["display_layout_configuration.xml"] --> A1["HWC3 composition"] --> A2["SurfaceFlinger layer stack"]
+        A4["display_settings.xml / CarService overlay"] --> A2
+    end
+
+    A2 --> D3
+    D4 --> SCN
+
+    classDef hw fill:#EAF2FF,stroke:#2563EB,stroke-width:2px,color:#0F172A;
+    classDef lnx fill:#EEFCEB,stroke:#16A34A,stroke-width:2px,color:#111827;
+    classDef and fill:#F3E8FF,stroke:#9333EA,stroke-width:2px,color:#111827;
+    class SCN,PNL hw;
+    class D1,D2,D3,D4 lnx;
+    class A1,A2,A3,A4 and;
+    linkStyle 0,1,2,3,4,5,6 stroke:#475569,stroke-width:2.5px;

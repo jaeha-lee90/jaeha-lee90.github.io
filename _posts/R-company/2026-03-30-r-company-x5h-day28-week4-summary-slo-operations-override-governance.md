@@ -1,5 +1,5 @@
 ---
-title: R사 X5H Day28 - 4주차 요약: SLO 운영 규칙과 Override 거버넌스
+title: "R사 X5H Day28 - 4주차 요약: SLO 운영 규칙과 Override 거버넌스"
 author: JaeHa
 date: 2026-03-30 01:00:00 +0900
 categories: [R사, X5H, Productization, Bring-up]

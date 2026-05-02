@@ -21,7 +21,29 @@ Day57~58에서 camera 입력과 virtualization 경계를 먼저 정리했으니,
   4. atomic commit은 성공하지만 올바른 plane에 안 올라감
   5. Android HWC3 / SurfaceFlinger / multi-display policy에서 다른 display로 라우팅됨
 
+## 0. 먼저 그림으로 보는 Display Bring-up Debug Map
+
+### 0-1. display 전체 계층 구조
+
+![X5H Day59 diagram 1](/assets/img/r-company/x5h-day59-diagram-01.png)
+
+
+### 0-2. bring-up 절단 순서
+
+![X5H Day59 diagram 2](/assets/img/r-company/x5h-day59-diagram-02.png)
+
+
+### 0-3. 증상별 최초 의심 영역
+
+![X5H Day59 diagram 3](/assets/img/r-company/x5h-day59-diagram-03.png)
+
+
 ## 코드 포인트
+
+### 0-4. Linux direct scanout과 Android policy의 관계
+
+![X5H Day59 diagram 4](/assets/img/r-company/x5h-day59-diagram-04.png)
+
 
 ### 1) Linux display 실행 경로: `display_drm.c`
 
@@ -151,3 +173,8 @@ Day57~58에서 camera 입력과 virtualization 경계를 먼저 정리했으니,
    - capture가 살았더라도 display plane target이 맞지 않으면 user 입장에선 여전히 실패다.
 
 실무적으로는 여기서 한 단계 더 들어가서 **Day60에 camera buffer가 display plane까지 넘어오는 ownership/latency contract**를 정리하는 게 좋다. 그 주제를 잡으면 camera bring-up과 display bring-up 사이의 실제 통합 경계를 더 날카롭게 설명할 수 있다.
+
+## 부록: 최종 display ownership 그림
+
+![X5H Day59 diagram 5](/assets/img/r-company/x5h-day59-diagram-05.png)
+

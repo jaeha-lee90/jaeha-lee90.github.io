@@ -1,5 +1,5 @@
 ---
-title: R사 X5H Day14 - 2주차 요약: 브링업 게이트와 우선 수정축
+title: "R사 X5H Day14 - 2주차 요약: 브링업 게이트와 우선 수정축"
 author: JaeHa
 date: 2026-03-03 09:00:00 -0800
 categories: [R사, X5H, Display, Bring-up]

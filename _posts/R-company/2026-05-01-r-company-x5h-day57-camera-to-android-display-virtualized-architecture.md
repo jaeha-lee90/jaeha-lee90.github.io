@@ -22,91 +22,18 @@ tags: [R사, X5H, Day57, camera, display, xen, android, linux, freertos, cr52, b
 
 ### 0-1. 전체 시스템 그림
 
-```mermaid
-flowchart LR
-    subgraph HW["HW Layer"]
-        SENSOR["Camera Sensor\nIMX/AR/OX 계열"]
-        SERDES["Serializer / Deserializer\nGMSL/CSI bridge"]
-        CSI["CSI-2 Rx / VIN"]
-        ISP_HW["ISP"]
-        IMR_HW["IMR / Resize / LDC"]
-        DISP_HW["Display Controller / RVGC"]
-        PANEL["LCD / Cluster / Passenger Display"]
-    end
+![X5H Day57 diagram 1](/assets/img/r-company/x5h-day57-diagram-01.png)
 
-    subgraph RCORE["R-core (CR52 / FreeRTOS)"]
-        CAMFWK_RT["camfwk HAL\nsensor_type / active_link / vin_channel / isp_unit"]
-        DISP_RT["disfwk / R_WM display path\nDisplayInit / LayerFlush"]
-        RPMSG_RT["RPMsg / shared buffer endpoint\nFRAME_READY / FEED_ME"]
-    end
-
-    subgraph XENCORE["A-core + Xen"]
-        DOM0["Dom0\ncontrol domain"]
-        DOMD["DomD\ndriver domain"]
-        V4L2_LNX["Linux V4L2 path\n/dev/videoX\nstream_on / dqbuf / qbuf"]
-        DRM_LNX["Linux DRM/KMS path\ndisfwk_fe\natomic commit"]
-        SHM["Shared memory / vring / virtio\nvdev buffer / rvgc region"]
-    end
-
-    subgraph ANDROID["Android Guest (DomA)"]
-        AK["Android kernel\nvirtual device / vendor modules"]
-        HWC["HWC3 / SurfaceFlinger"]
-        CAR["CarService / multi-display policy"]
-        UI["Android UI / Launcher"]
-    end
-
-    SENSOR --> SERDES --> CSI --> ISP_HW --> IMR_HW --> DISP_HW --> PANEL
-    CAMFWK_RT --> SERDES
-    CAMFWK_RT --> CSI
-    CAMFWK_RT --> ISP_HW
-    CAMFWK_RT --> RPMSG_RT
-    DISP_RT --> DISP_HW
-    RPMSG_RT --> SHM --> DOMD
-    DOMD --> V4L2_LNX --> DRM_LNX --> DISP_HW
-    DOM0 --> DOMD
-    AK --> HWC --> CAR --> UI --> DISP_HW
-```
 
 ### 0-2. 코어/도메인 ownership 그림
 
-```mermaid
-flowchart TB
-    subgraph R["R-core / CR52"]
-        R1["Sensor / SerDes init"]
-        R2["Camera route config"]
-        R3["Low-level camera framework"]
-        R4["Optional RTOS display path"]
-    end
+![X5H Day57 diagram 2](/assets/img/r-company/x5h-day57-diagram-02.png)
 
-    subgraph L["A-core Linux / DomD"]
-        L1["/dev/videoX capture"]
-        L2["V4L2 streaming"]
-        L3["DRM framebuffer commit"]
-        L4["Driver-domain HW facing role"]
-    end
-
-    subgraph A["Android / DomA"]
-        A1["Graphics composer"]
-        A2["SurfaceFlinger"]
-        A3["Car UX / multi-display"]
-        A4["Final visible UI"]
-    end
-
-    R --> L --> A
-```
 
 ### 0-3. 데이터 경로 vs 제어 경로 그림
 
-```mermaid
-flowchart LR
-    subgraph DATA["Frame / data path"]
-        D1["Sensor frame"] --> D2["CSI/VIN"] --> D3["Shared/streamed buffer"] --> D4["Linux / DRM / Android composition"] --> D5["Display output"]
-    end
+![X5H Day57 diagram 3](/assets/img/r-company/x5h-day57-diagram-03.png)
 
-    subgraph CTRL["Control / config path"]
-        C1["CR52 camfwk config"] --> C2["Sensor / link setup"] --> C3["Channel init/start"] --> C4["Buffer feed / frame ready"] --> C5["Display policy / UI route"]
-    end
-```
 
 ---
 
@@ -638,88 +565,22 @@ secondary display에 대해:
 
 ---
 
-## 8. Mermaid 구조도
+## 8. PNG 구조도
 
 ### 8-1. 코어/도메인 분리 전체 구조
 
-```mermaid
-flowchart LR
-    subgraph HW["Hardware"]
-        CAM["Camera Sensor"]
-        SER["Serializer / Deserializer"]
-        CSI["CSI-2 / VIN Capture HW"]
-        ISP["ISP optional"]
-        IMR["IMR / Resize / LDC optional"]
-        DISP["Display HW / RVGC / DRM scanout"]
-        PANEL["Main / Passenger Display"]
-    end
+![X5H Day57 diagram 4](/assets/img/r-company/x5h-day57-diagram-04.png)
 
-    subgraph RCORE["R-core / CR52 / FreeRTOS"]
-        CAMFWK["camfwk HAL\nsensor_type / vin_channel / isp_unit / csi2_channel / lanes / speed"]
-        DISFWK_RT["FreeRTOS display framework\nR_WM_DisplayInit / LayerFlush"]
-        RPMSG["RPMsg / camera protocol\nINIT / START / FEED_BUFFER / FRAME_READY"]
-    end
-
-    subgraph LINUX["A-core Linux / Xen"]
-        XEN["Xen"]
-        DOMD["DomD driver domain"]
-        V4L2["Linux camera path\n/dev/videoX\nqbuf / dqbuf / mmap / stream_on"]
-        DRM["Linux display path\ndisfwk_fe DRM\natomic commit"]
-    end
-
-    subgraph ANDROID["Android Guest (DomA)"]
-        AK["Android kernel / vendor modules"]
-        SF["HWC3 / SurfaceFlinger"]
-        CAR["CarService / multi-display policy"]
-        UI["Android UI"]
-    end
-
-    CAM --> SER --> CSI --> ISP --> IMR --> DISP --> PANEL
-
-    CAMFWK --> SER
-    CAMFWK --> CSI
-    CAMFWK --> ISP
-    CAMFWK --> RPMSG
-    DISFWK_RT --> DISP
-
-    RPMSG --> DOMD
-    XEN --> DOMD
-    XEN --> AK
-    DOMD --> V4L2 --> DRM --> DISP
-
-    AK --> SF --> CAR --> UI --> DISP
-```
 
 ### 8-2. Camera path 전용 구조도
 
-```mermaid
-flowchart LR
-    A["Sensor"] --> B["Serializer / Deserializer"]
-    B --> C["CSI-2 / VIN"]
-    C --> D["CR52 camfwk HAL\nroute + init + config"]
-    D --> E["RPMsg / shared buffer / bridge"]
-    E --> F["Linux V4L2 capture\n/dev/videoX"]
-    F --> G["ISP optional"]
-    G --> H["IMR / Resize / LDC"]
-    H --> I["AI pipeline optional"]
-    H --> J["VOUT / display output"]
-```
+![X5H Day57 diagram 5](/assets/img/r-company/x5h-day57-diagram-05.png)
+
 
 ### 8-3. Display path 전용 구조도
 
-```mermaid
-flowchart LR
-    SRC["Camera / processed frame / UI buffer"] --> DRMFB["Linux or RTOS frame buffer"]
-    DRMFB --> KMS["disfwk_fe DRM / display framework"]
-    KMS --> PLANE["Plane / CRTC / Connector"]
-    PLANE --> OUT["Display HW scanout"]
-    OUT --> LCD["Main display / Passenger display"]
+![X5H Day57 diagram 6](/assets/img/r-company/x5h-day57-diagram-06.png)
 
-    HWC["Android HWC3 / SurfaceFlinger"] --> PLANE
-    CFG1["display_layout_configuration.xml"] --> HWC
-    CFG2["display_settings.xml"] --> HWC
-    CFG3["CarServiceOverlayXenVm"] --> HWC
-```
 
 ---
 

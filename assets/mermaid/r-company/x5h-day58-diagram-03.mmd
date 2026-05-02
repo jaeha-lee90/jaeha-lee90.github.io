@@ -1,0 +1,13 @@
+flowchart TB
+    A["No sensor ACK"] --> A1["Power / reset / I2C / SerDes"]
+    B0["Link lock OK, but no frame"] --> B1["CSI / VIN / lane / speed mismatch"]
+    C0["/dev/video 없음"] --> C1["Route / driver / domain / DT"]
+    D0["stream_on 후 dqbuf timeout"] --> D1["Ingress / interrupt / buffer queue"]
+    E0["1 frame 후 정지"] --> E1["Buffer recycle / feed_buffer / starvation"]
+    F0["Capture는 되는데 output만 없음"] --> F1["VOUT / DRM / display path"]
+
+    classDef symptom fill:#FEE2E2,stroke:#DC2626,stroke-width:2px,color:#111827;
+    classDef cause fill:#FEF3C7,stroke:#D97706,stroke-width:2px,color:#111827;
+    class A,B0,C0,D0,E0,F0 symptom;
+    class A1,B1,C1,D1,E1,F1 cause;
+    linkStyle 0,1,2,3,4,5 stroke:#475569,stroke-width:2.5px;

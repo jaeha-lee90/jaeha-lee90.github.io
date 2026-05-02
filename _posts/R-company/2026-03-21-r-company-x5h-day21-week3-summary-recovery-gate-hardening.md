@@ -1,5 +1,5 @@
 ---
-title: R사 X5H Day21 - 3주차 요약: Recovery Gate Hardening
+title: "R사 X5H Day21 - 3주차 요약: Recovery Gate Hardening"
 author: JaeHa
 date: 2026-03-21 01:00:00 +0900
 categories: [R사, X5H, Domain-Integration, Bring-up]
