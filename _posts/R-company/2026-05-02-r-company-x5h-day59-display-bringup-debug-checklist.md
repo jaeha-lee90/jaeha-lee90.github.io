@@ -25,24 +25,24 @@ Day57~58에서 camera 입력과 virtualization 경계를 먼저 정리했으니,
 
 ### 0-1. display 전체 계층 구조
 
-![X5H Day59 diagram 1](/assets/img/r-company/x5h-day59-diagram-01.png)
+<object data="/assets/img/r-company/x5h-day59-diagram-01.png" type="image/png" aria-label="X5H Day59 diagram 1" style="width:100%; height:auto; border-radius:12px; margin:12px 0 20px;"></object>
 
 
 ### 0-2. bring-up 절단 순서
 
-![X5H Day59 diagram 2](/assets/img/r-company/x5h-day59-diagram-02.png)
+<object data="/assets/img/r-company/x5h-day59-diagram-02.png" type="image/png" aria-label="X5H Day59 diagram 2" style="width:100%; height:auto; border-radius:12px; margin:12px 0 20px;"></object>
 
 
 ### 0-3. 증상별 최초 의심 영역
 
-![X5H Day59 diagram 3](/assets/img/r-company/x5h-day59-diagram-03.png)
+<object data="/assets/img/r-company/x5h-day59-diagram-03.png" type="image/png" aria-label="X5H Day59 diagram 3" style="width:100%; height:auto; border-radius:12px; margin:12px 0 20px;"></object>
 
 
 ## 코드 포인트
 
 ### 0-4. Linux direct scanout과 Android policy의 관계
 
-![X5H Day59 diagram 4](/assets/img/r-company/x5h-day59-diagram-04.png)
+<object data="/assets/img/r-company/x5h-day59-diagram-04.png" type="image/png" aria-label="X5H Day59 diagram 4" style="width:100%; height:auto; border-radius:12px; margin:12px 0 20px;"></object>
 
 
 ### 1) Linux display 실행 경로: `display_drm.c`
@@ -176,5 +176,5 @@ Day57~58에서 camera 입력과 virtualization 경계를 먼저 정리했으니,
 
 ## 부록: 최종 display ownership 그림
 
-![X5H Day59 diagram 5](/assets/img/r-company/x5h-day59-diagram-05.png)
+<object data="/assets/img/r-company/x5h-day59-diagram-05.png" type="image/png" aria-label="X5H Day59 diagram 5" style="width:100%; height:auto; border-radius:12px; margin:12px 0 20px;"></object>
 

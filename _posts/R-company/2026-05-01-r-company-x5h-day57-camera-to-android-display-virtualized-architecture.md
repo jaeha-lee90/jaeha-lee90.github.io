@@ -22,17 +22,17 @@ tags: [R사, X5H, Day57, camera, display, xen, android, linux, freertos, cr52, b
 
 ### 0-1. 전체 시스템 그림
 
-![X5H Day57 diagram 1](/assets/img/r-company/x5h-day57-diagram-01.png)
+<object data="/assets/img/r-company/x5h-day57-diagram-01.png" type="image/png" aria-label="X5H Day57 diagram 1" style="width:100%; height:auto; border-radius:12px; margin:12px 0 20px;"></object>
 
 
 ### 0-2. 코어/도메인 ownership 그림
 
-![X5H Day57 diagram 2](/assets/img/r-company/x5h-day57-diagram-02.png)
+<object data="/assets/img/r-company/x5h-day57-diagram-02.png" type="image/png" aria-label="X5H Day57 diagram 2" style="width:100%; height:auto; border-radius:12px; margin:12px 0 20px;"></object>
 
 
 ### 0-3. 데이터 경로 vs 제어 경로 그림
 
-![X5H Day57 diagram 3](/assets/img/r-company/x5h-day57-diagram-03.png)
+<object data="/assets/img/r-company/x5h-day57-diagram-03.png" type="image/png" aria-label="X5H Day57 diagram 3" style="width:100%; height:auto; border-radius:12px; margin:12px 0 20px;"></object>
 
 
 ---
@@ -569,17 +569,17 @@ secondary display에 대해:
 
 ### 8-1. 코어/도메인 분리 전체 구조
 
-![X5H Day57 diagram 4](/assets/img/r-company/x5h-day57-diagram-04.png)
+<object data="/assets/img/r-company/x5h-day57-diagram-04.png" type="image/png" aria-label="X5H Day57 diagram 4" style="width:100%; height:auto; border-radius:12px; margin:12px 0 20px;"></object>
 
 
 ### 8-2. Camera path 전용 구조도
 
-![X5H Day57 diagram 5](/assets/img/r-company/x5h-day57-diagram-05.png)
+<object data="/assets/img/r-company/x5h-day57-diagram-05.png" type="image/png" aria-label="X5H Day57 diagram 5" style="width:100%; height:auto; border-radius:12px; margin:12px 0 20px;"></object>
 
 
 ### 8-3. Display path 전용 구조도
 
-![X5H Day57 diagram 6](/assets/img/r-company/x5h-day57-diagram-06.png)
+<object data="/assets/img/r-company/x5h-day57-diagram-06.png" type="image/png" aria-label="X5H Day57 diagram 6" style="width:100%; height:auto; border-radius:12px; margin:12px 0 20px;"></object>
 
 
 ---

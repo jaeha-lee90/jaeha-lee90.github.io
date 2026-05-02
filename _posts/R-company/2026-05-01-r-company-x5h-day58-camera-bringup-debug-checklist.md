@@ -35,17 +35,17 @@ Day57에서는 X5H의 camera → virtualization → Android display 구조를 **
 
 ### 0-1. 카메라 SW/HW 전체 경로
 
-![X5H Day58 diagram 1](/assets/img/r-company/x5h-day58-diagram-01.png)
+<object data="/assets/img/r-company/x5h-day58-diagram-01.png" type="image/png" aria-label="X5H Day58 diagram 1" style="width:100%; height:auto; border-radius:12px; margin:12px 0 20px;"></object>
 
 
 ### 0-2. 어느 계층에서 문제를 좁히는지
 
-![X5H Day58 diagram 2](/assets/img/r-company/x5h-day58-diagram-02.png)
+<object data="/assets/img/r-company/x5h-day58-diagram-02.png" type="image/png" aria-label="X5H Day58 diagram 2" style="width:100%; height:auto; border-radius:12px; margin:12px 0 20px;"></object>
 
 
 ### 0-3. 증상별 최초 의심 영역
 
-![X5H Day58 diagram 3](/assets/img/r-company/x5h-day58-diagram-03.png)
+<object data="/assets/img/r-company/x5h-day58-diagram-03.png" type="image/png" aria-label="X5H Day58 diagram 3" style="width:100%; height:auto; border-radius:12px; margin:12px 0 20px;"></object>
 
 
 ---
@@ -54,7 +54,7 @@ Day57에서는 X5H의 camera → virtualization → Android display 구조를 **
 
 이 레포를 기준으로 camera path를 아주 단순화하면 아래 순서다.
 
-![X5H Day58 diagram 4](/assets/img/r-company/x5h-day58-diagram-04.png)
+<object data="/assets/img/r-company/x5h-day58-diagram-04.png" type="image/png" aria-label="X5H Day58 diagram 4" style="width:100%; height:auto; border-radius:12px; margin:12px 0 20px;"></object>
 
 
 즉 bring-up할 때는 “한 번에 전체를 본다”가 아니라,
@@ -62,12 +62,12 @@ Day57에서는 X5H의 camera → virtualization → Android display 구조를 **
 
 또 실제 디버그는 아래처럼 **HW → FW → Linux → Bridge → Post-process** 순서로 끊어 보는 게 가장 빠르다.
 
-![X5H Day58 diagram 5](/assets/img/r-company/x5h-day58-diagram-05.png)
+<object data="/assets/img/r-company/x5h-day58-diagram-05.png" type="image/png" aria-label="X5H Day58 diagram 5" style="width:100%; height:auto; border-radius:12px; margin:12px 0 20px;"></object>
 
 
 ### 1-1. 증상에서 root cause로 들어가는 절단 트리
 
-![X5H Day58 diagram 6](/assets/img/r-company/x5h-day58-diagram-06.png)
+<object data="/assets/img/r-company/x5h-day58-diagram-06.png" type="image/png" aria-label="X5H Day58 diagram 6" style="width:100%; height:auto; border-radius:12px; margin:12px 0 20px;"></object>
 
 
 ---
