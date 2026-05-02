@@ -31,6 +31,35 @@ Day57에서는 X5H의 camera → virtualization → Android display 구조를 **
 
 ---
 
+## 0. 먼저 그림으로 보는 Camera Bring-up Debug Map
+
+### 0-1. 카메라 SW/HW 전체 경로
+
+```mermaid
+flowchart LR
+    S["Sensor"] --> SD["Serializer / Deserializer"] --> C["CSI-2 / VIN"] --> R["CR52 camfwk"] --> B["RPMsg / shared buffer"] --> V["Linux V4L2"] --> P["ISP / IMR / AI / VOUT"] --> O["Output / Display / Consumer"]
+```
+
+### 0-2. 어느 계층에서 문제를 좁히는지
+
+```mermaid
+flowchart TB
+    H1["Stage 1\nSensor / Link"] --> H2["Stage 2\nCSI / VIN route"] --> H3["Stage 3\nCR52 camfwk init"] --> H4["Stage 4\nLinux V4L2 stream"] --> H5["Stage 5\nBuffer / RPMsg / Frame ready"] --> H6["Stage 6\nISP / IMR / AI / VOUT"]
+```
+
+### 0-3. 증상별 최초 의심 영역
+
+```mermaid
+flowchart LR
+    A["No sensor ACK"] --> A1["Power / reset / I2C / SerDes"]
+    B0["/dev/video 없음"] --> B1["Route / driver / domain / DT"]
+    C0["stream_on 후 dqbuf timeout"] --> C1["Ingress / interrupt / buffer queue"]
+    D0["1 frame 후 정지"] --> D1["Buffer recycle / feed_buffer / starvation"]
+    E0["화면만 안 뜸"] --> E1["VOUT / DRM / display path"]
+```
+
+---
+
 ## 1. 먼저 구조를 다시 짧게 잡고 시작
 
 이 레포를 기준으로 camera path를 아주 단순화하면 아래 순서다.
@@ -48,6 +77,13 @@ flowchart LR
 
 즉 bring-up할 때는 “한 번에 전체를 본다”가 아니라,
 **이 체인을 한 칸씩 분해해서 어느 경계에서 끊겼는지 보는 게 핵심**이다.
+
+또 실제 디버그는 아래처럼 **HW → FW → Linux → Bridge → Post-process** 순서로 끊어 보는 게 가장 빠르다.
+
+```mermaid
+flowchart LR
+    HW["HW ingress\nsensor / link / CSI"] --> FW["FW control\nCR52 camfwk"] --> LNX["Linux capture\nV4L2"] --> BR["Bridge\nRPMsg / buffer"] --> POST["Post-process\nISP / IMR / AI / VOUT"]
+```
 
 ---
 

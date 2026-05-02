@@ -18,6 +18,98 @@ tags: [R사, X5H, Day57, camera, display, xen, android, linux, freertos, cr52, b
 
 ---
 
+## 0. 한눈에 보는 SW/HW 아키텍처 그림
+
+### 0-1. 전체 시스템 그림
+
+```mermaid
+flowchart LR
+    subgraph HW["HW Layer"]
+        SENSOR["Camera Sensor\nIMX/AR/OX 계열"]
+        SERDES["Serializer / Deserializer\nGMSL/CSI bridge"]
+        CSI["CSI-2 Rx / VIN"]
+        ISP_HW["ISP"]
+        IMR_HW["IMR / Resize / LDC"]
+        DISP_HW["Display Controller / RVGC"]
+        PANEL["LCD / Cluster / Passenger Display"]
+    end
+
+    subgraph RCORE["R-core (CR52 / FreeRTOS)"]
+        CAMFWK_RT["camfwk HAL\nsensor_type / active_link / vin_channel / isp_unit"]
+        DISP_RT["disfwk / R_WM display path\nDisplayInit / LayerFlush"]
+        RPMSG_RT["RPMsg / shared buffer endpoint\nFRAME_READY / FEED_ME"]
+    end
+
+    subgraph XENCORE["A-core + Xen"]
+        DOM0["Dom0\ncontrol domain"]
+        DOMD["DomD\ndriver domain"]
+        V4L2_LNX["Linux V4L2 path\n/dev/videoX\nstream_on / dqbuf / qbuf"]
+        DRM_LNX["Linux DRM/KMS path\ndisfwk_fe\natomic commit"]
+        SHM["Shared memory / vring / virtio\nvdev buffer / rvgc region"]
+    end
+
+    subgraph ANDROID["Android Guest (DomA)"]
+        AK["Android kernel\nvirtual device / vendor modules"]
+        HWC["HWC3 / SurfaceFlinger"]
+        CAR["CarService / multi-display policy"]
+        UI["Android UI / Launcher"]
+    end
+
+    SENSOR --> SERDES --> CSI --> ISP_HW --> IMR_HW --> DISP_HW --> PANEL
+    CAMFWK_RT --> SERDES
+    CAMFWK_RT --> CSI
+    CAMFWK_RT --> ISP_HW
+    CAMFWK_RT --> RPMSG_RT
+    DISP_RT --> DISP_HW
+    RPMSG_RT --> SHM --> DOMD
+    DOMD --> V4L2_LNX --> DRM_LNX --> DISP_HW
+    DOM0 --> DOMD
+    AK --> HWC --> CAR --> UI --> DISP_HW
+```
+
+### 0-2. 코어/도메인 ownership 그림
+
+```mermaid
+flowchart TB
+    subgraph R["R-core / CR52"]
+        R1["Sensor / SerDes init"]
+        R2["Camera route config"]
+        R3["Low-level camera framework"]
+        R4["Optional RTOS display path"]
+    end
+
+    subgraph L["A-core Linux / DomD"]
+        L1["/dev/videoX capture"]
+        L2["V4L2 streaming"]
+        L3["DRM framebuffer commit"]
+        L4["Driver-domain HW facing role"]
+    end
+
+    subgraph A["Android / DomA"]
+        A1["Graphics composer"]
+        A2["SurfaceFlinger"]
+        A3["Car UX / multi-display"]
+        A4["Final visible UI"]
+    end
+
+    R --> L --> A
+```
+
+### 0-3. 데이터 경로 vs 제어 경로 그림
+
+```mermaid
+flowchart LR
+    subgraph DATA["Frame / data path"]
+        D1["Sensor frame"] --> D2["CSI/VIN"] --> D3["Shared/streamed buffer"] --> D4["Linux / DRM / Android composition"] --> D5["Display output"]
+    end
+
+    subgraph CTRL["Control / config path"]
+        C1["CR52 camfwk config"] --> C2["Sensor / link setup"] --> C3["Channel init/start"] --> C4["Buffer feed / frame ready"] --> C5["Display policy / UI route"]
+    end
+```
+
+---
+
 ## 1. 레포에서 확인한 핵심 근거
 
 이번 해석의 주 근거는 아래 파일들이다.
