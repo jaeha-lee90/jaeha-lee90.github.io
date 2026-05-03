@@ -12,8 +12,6 @@ on:
 jobs:
   continuous-delivery:
     runs-on: ubuntu-latest
-    env:
-      GEMS_PATH: vendor/bundle
 
     steps:
       - name: Checkout
@@ -21,25 +19,11 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Setup Ruby
+      - name: Setup Ruby + bundle install (cached)
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: '3.2'
-          bundler: '2.6.9'
-
-      - name: Bundle Caching
-        uses: actions/cache@v4
-        with:
-          path: ${{ env.GEMS_PATH }}
-          key: ${{ runner.os }}-ruby3.2-gems-${{ hashFiles('**/Gemfile.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-ruby3.2-gems-
-
-      - name: Bundle Install
-        run: |
-          gem install bundler -v 2.6.9
-          bundle config path ${{ env.GEMS_PATH }}
-          bundle _2.6.9_ install --jobs 4 --retry 3 || bundle install --jobs 4 --retry 3
+          bundler-cache: true
 
       - name: Check baseurl
         run: |
