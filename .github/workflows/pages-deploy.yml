@@ -31,9 +31,9 @@ jobs:
         uses: actions/cache@v4
         with:
           path: ${{ env.GEMS_PATH }}
-          key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}
+          key: ${{ runner.os }}-ruby3.2-gems-${{ hashFiles('**/Gemfile.lock') }}
           restore-keys: |
-            ${{ runner.os }}-gems-
+            ${{ runner.os }}-ruby3.2-gems-
 
       - name: Bundle Install
         run: |
