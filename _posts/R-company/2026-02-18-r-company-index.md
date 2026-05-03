@@ -76,6 +76,7 @@ pin: true
 63. [R사 X5H Day60 - 전체 HW/SW 아키텍처 정리 (Boot, Xen 멀티도메인, CR52 rcar-xos, Android Trout-XenVM)](/posts/r-company-x5h-day60-full-hw-sw-architecture-overview/)
 64. [R사 X5H Day61 - Secure Boot Chain Anchor와 인증 경계](/posts/r-company-x5h-day61-secure-boot-chain-anchor-attestation-boundary/)
 65. [R사 X5H Day62 - Xen DTB 분할과 IPMMU/passthrough Ownership Ledger](/posts/r-company-x5h-day62-xen-dtb-split-ipmmu-passthrough-ownership/)
+66. [R사 X5H Day63 - DomD/CR52/RVGC/RPMsg Display Hand-off 실패 패턴](/posts/r-company-x5h-day63-domd-cr52-rvgc-rpmsg-display-handoff-failure-patterns/)
 
 ## 운영 원칙
 
