@@ -19,11 +19,30 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Setup Ruby + bundle install (cached)
+      - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: '3.2'
-          bundler-cache: true
+
+      - name: Debug environment
+        run: |
+          ruby --version
+          gem --version
+          gem env home
+          which bundle && bundle --version || echo "no bundle on PATH yet"
+          gem list bundler || true
+          echo "--- BUNDLED_WITH from lockfile ---"
+          tail -3 Gemfile.lock
+          echo "--- PLATFORMS ---"
+          awk '/^PLATFORMS/,/^$/' Gemfile.lock
+
+      - name: Install bundler + gems
+        run: |
+          gem install bundler -v 2.6.9 --no-document
+          bundle config set --local frozen false
+          bundle config set --local path vendor/bundle
+          bundle install --jobs 4 --retry 3
+          bundle info jekyll | head -3
 
       - name: Check baseurl
         run: |
