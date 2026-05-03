@@ -37,8 +37,9 @@ jobs:
 
       - name: Bundle Install
         run: |
+          gem install bundler -v 2.6.9
           bundle config path ${{ env.GEMS_PATH }}
-          bundle _2.6.9_ install --jobs 4 --retry 3
+          bundle _2.6.9_ install --jobs 4 --retry 3 || bundle install --jobs 4 --retry 3
 
       - name: Check baseurl
         run: |
@@ -51,7 +52,7 @@ jobs:
         env:
           JEKYLL_ENV: production
         run: |
-          bundle _2.6.9_ exec jekyll b -d "_site$BASE_URL"
+          bundle exec jekyll b -d "_site$BASE_URL"
 
       - name: Deploy
         run: |
