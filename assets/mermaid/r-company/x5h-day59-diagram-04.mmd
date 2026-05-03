@@ -1,15 +1,15 @@
 flowchart LR
-    T0["Known-good test pattern"] --> T1["disfwk_fe open"] --> T2["connector / CRTC / plane bind"] --> T3["AddFB2 + atomic commit"] --> T4["패널에 직접 scanout"]
-    T4 --> T5{"보이는가?"}
-    T5 -- "No" --> T6["HW / DRM layer 문제"]
-    T5 -- "Yes" --> T7["Android HWC3 / SF / policy 문제로 범위 축소"]
+    T0["Known-good test pattern"] --> T1["CR52 backend init / panel alive 확인"] --> T2["disfwk_fe open"] --> T3["connector / CRTC / plane bind"] --> T4["AddFB2 + atomic commit"] --> T5["RVGC flush / VBLANK"] --> T6["패널에 실제 scanout"]
+    T6 --> Q{"보이는가?"}
+    Q -- "No" --> B["backend / DRM / RPMsg hand-off 문제"]
+    Q -- "Yes" --> G["Android HWC3 / SF / policy 문제로 범위 축소"]
 
     classDef main fill:#EAF2FF,stroke:#2563EB,stroke-width:2px,color:#0F172A;
     classDef decision fill:#FEF3C7,stroke:#D97706,stroke-width:2px,color:#111827;
     classDef bad fill:#FEE2E2,stroke:#DC2626,stroke-width:2px,color:#111827;
     classDef good fill:#DCFCE7,stroke:#16A34A,stroke-width:2px,color:#111827;
-    class T0,T1,T2,T3,T4 main;
-    class T5 decision;
-    class T6 bad;
-    class T7 good;
-    linkStyle 0,1,2,3,4,5 stroke:#475569,stroke-width:2.5px;
+    class T0,T1,T2,T3,T4,T5,T6 main;
+    class Q decision;
+    class B bad;
+    class G good;
+    linkStyle 0,1,2,3,4,5,6,7 stroke:#475569,stroke-width:2.5px;

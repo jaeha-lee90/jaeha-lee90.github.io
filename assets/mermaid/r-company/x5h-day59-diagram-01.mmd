@@ -1,15 +1,28 @@
 flowchart LR
-    SRC["Frame source\ncamera / test pattern / UI buffer"] --> BUF["Buffer object\ndumb buffer / imported buffer"] --> DRM["disfwk_fe DRM/KMS"] --> PL["Plane"] --> CRTC["CRTC"] --> CONN["Connector"] --> PANEL["Panel / display link"]
+    SRC["Frame source\ncamera / test pattern / UI buffer"] --> BUF["Buffer object\ndumb buffer / imported buffer"]
 
-    subgraph ANDROID["Android guest side"]
-        HWC["HWC3"] --> SF["SurfaceFlinger"] --> POLICY["CarService / display policy"]
+    subgraph ANDROID["Android guest / DomA"]
+        POLICY["CarService / display policy"] --> HWC["HWC3"] --> SF["SurfaceFlinger"]
     end
 
-    POLICY --> BUF
+    subgraph LINUX["Linux frontend / DomD or guest-side DRM client"]
+        DRM["disfwk_fe DRM/KMS frontend"] --> PL["Plane / CRTC / connector model"]
+    end
 
-    classDef pipe fill:#EAF2FF,stroke:#2563EB,stroke-width:2px,color:#0F172A;
+    subgraph RT["CR52 / FreeRTOS display backend"]
+        RVGC["RPMsg / RVGC contract\nDISPLAY_INIT / LAYER_SET_ADDR / FLUSH"] --> DISFWK["disfwk backend\nR_WM_DisplayInit / LayerFlush"] --> PANEL["Panel / bridge / link / scanout"]
+    end
+
+    SF --> BUF
+    BUF --> DRM
+    PL --> RVGC
+
+    classDef src fill:#FFF7ED,stroke:#EA580C,stroke-width:2px,color:#111827;
     classDef and fill:#F3E8FF,stroke:#9333EA,stroke-width:2px,color:#111827;
-    class SRC,BUF,DRM,PL,CRTC,CONN,PANEL pipe;
-    class HWC,SF,POLICY and;
-    linkStyle 0,1,2,3,4,5 stroke:#2563EB,stroke-width:3px;
-    linkStyle 6,7,8 stroke:#9333EA,stroke-width:3px;
+    classDef lnx fill:#EAF2FF,stroke:#2563EB,stroke-width:2px,color:#0F172A;
+    classDef rt fill:#ECFCCB,stroke:#65A30D,stroke-width:2px,color:#111827;
+    class SRC,BUF src;
+    class POLICY,HWC,SF and;
+    class DRM,PL lnx;
+    class RVGC,DISFWK,PANEL rt;
+    linkStyle 0,1,2,3,4,5,6 stroke:#475569,stroke-width:3px;
