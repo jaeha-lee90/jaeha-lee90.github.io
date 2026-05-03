@@ -1,0 +1,24 @@
+flowchart TB
+    subgraph RT["CR52 / FreeRTOS backend owner"]
+        R1["R_WM_DisplayInit / Enable"] --> R2["disfwk backend layer state"] --> R3["Panel / bridge / link / scanout"]
+    end
+
+    subgraph LNX["Linux frontend"]
+        D1["disfwk_fe open"] --> D2["Connector / CRTC / Plane selection"] --> D3["Framebuffer registration"] --> D4["Atomic commit"] --> D5["RPMsg / RVGC flush request"]
+    end
+
+    subgraph AND["Android / DomA policy"]
+        A1["display_layout_configuration.xml\naddress0=default / address1=passenger"] --> A2["HWC3 composition"] --> A3["SurfaceFlinger layer stack"]
+        A4["display_settings.xml\nlocal:1 decor / IME / density"] --> A3
+    end
+
+    A3 --> D3
+    D5 --> R2
+
+    classDef rt fill:#ECFCCB,stroke:#65A30D,stroke-width:2px,color:#111827;
+    classDef lnx fill:#EAF2FF,stroke:#2563EB,stroke-width:2px,color:#0F172A;
+    classDef and fill:#F3E8FF,stroke:#9333EA,stroke-width:2px,color:#111827;
+    class R1,R2,R3 rt;
+    class D1,D2,D3,D4,D5 lnx;
+    class A1,A2,A3,A4 and;
+    linkStyle 0,1,2,3,4,5,6,7 stroke:#475569,stroke-width:2.5px;

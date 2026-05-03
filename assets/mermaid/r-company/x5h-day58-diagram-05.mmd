@@ -1,0 +1,14 @@
+flowchart LR
+    HW["HW ingress\nsensor / link / CSI"] --> FW["FW control\nCR52 camfwk"] --> LNX["Linux capture\nV4L2"] --> BR["Bridge\nRPMsg / buffer"] --> POST["Post-process\nISP / IMR / AI / VOUT"]
+    HW -.inspect.-> CHK1["ACK / lock\nlane / speed"]
+    FW -.inspect.-> CHK2["route / init\nstart"]
+    LNX -.inspect.-> CHK3["node / format\ndqbuf"]
+    BR -.inspect.-> CHK4["frame_ready\nfeed_me"]
+    POST -.inspect.-> CHK5["which downstream\nstage died"]
+
+    classDef main fill:#EAF2FF,stroke:#2563EB,stroke-width:2px,color:#0F172A;
+    classDef check fill:#FEF3C7,stroke:#D97706,stroke-width:2px,color:#111827;
+    class HW,FW,LNX,BR,POST main;
+    class CHK1,CHK2,CHK3,CHK4,CHK5 check;
+    linkStyle 0,1,2,3 stroke:#2563EB,stroke-width:3px;
+    linkStyle 4,5,6,7,8 stroke:#D97706,stroke-width:2px,stroke-dasharray: 5 4;

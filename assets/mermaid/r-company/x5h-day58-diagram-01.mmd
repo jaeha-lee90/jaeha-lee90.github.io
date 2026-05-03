@@ -1,0 +1,13 @@
+flowchart LR
+    PWR["Power / reset / clock"] --> S["Sensor"] --> SER["Serializer"] --> DESER["Deserializer"] --> CSI["CSI-2 Rx"] --> VIN["VIN"] --> R["CR52 camfwk\nroute / init / policy"] --> CH["CHANNEL_INIT / START"] --> B[("RPMsg / shared buffer / vring")] --> V["Linux V4L2\nopen / set_format / mmap / stream_on"] --> ISP["ISP optional"] --> IMR["IMR / resize / LDC"] --> AI["AI optional"] --> VOUT["VOUT / display / consumer"]
+
+    classDef hw fill:#EAF2FF,stroke:#2563EB,stroke-width:2px,color:#0F172A;
+    classDef fw fill:#FFF4E8,stroke:#F97316,stroke-width:2px,color:#111827;
+    classDef bridge fill:#FEF9C3,stroke:#CA8A04,stroke-width:2px,color:#111827;
+    classDef post fill:#EEFCEB,stroke:#16A34A,stroke-width:2px,color:#111827;
+    class PWR,S,SER,DESER,CSI,VIN hw;
+    class R,CH,V fw;
+    class B bridge;
+    class ISP,IMR,AI,VOUT post;
+    linkStyle 0,1,2,3,4,5,6,7,8 stroke:#2563EB,stroke-width:3px;
+    linkStyle 9,10,11,12 stroke:#16A34A,stroke-width:2.5px;

@@ -1,0 +1,28 @@
+flowchart LR
+    SRC["Frame source\ncamera / test pattern / UI buffer"] --> BUF["Buffer object\ndumb buffer / imported buffer"]
+
+    subgraph ANDROID["Android guest / DomA"]
+        POLICY["CarService / display policy"] --> HWC["HWC3"] --> SF["SurfaceFlinger"]
+    end
+
+    subgraph LINUX["Linux frontend / DomD or guest-side DRM client"]
+        DRM["disfwk_fe DRM/KMS frontend"] --> PL["Plane / CRTC / connector model"]
+    end
+
+    subgraph RT["CR52 / FreeRTOS display backend"]
+        RVGC["RPMsg / RVGC contract\nDISPLAY_INIT / LAYER_SET_ADDR / FLUSH"] --> DISFWK["disfwk backend\nR_WM_DisplayInit / LayerFlush"] --> PANEL["Panel / bridge / link / scanout"]
+    end
+
+    SF --> BUF
+    BUF --> DRM
+    PL --> RVGC
+
+    classDef src fill:#FFF7ED,stroke:#EA580C,stroke-width:2px,color:#111827;
+    classDef and fill:#F3E8FF,stroke:#9333EA,stroke-width:2px,color:#111827;
+    classDef lnx fill:#EAF2FF,stroke:#2563EB,stroke-width:2px,color:#0F172A;
+    classDef rt fill:#ECFCCB,stroke:#65A30D,stroke-width:2px,color:#111827;
+    class SRC,BUF src;
+    class POLICY,HWC,SF and;
+    class DRM,PL lnx;
+    class RVGC,DISFWK,PANEL rt;
+    linkStyle 0,1,2,3,4,5,6 stroke:#475569,stroke-width:3px;
