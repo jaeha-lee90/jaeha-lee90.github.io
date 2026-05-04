@@ -77,6 +77,7 @@ pin: true
 64. [R사 X5H Day61 - Secure Boot Chain Anchor와 인증 경계](/posts/r-company-x5h-day61-secure-boot-chain-anchor-attestation-boundary/)
 65. [R사 X5H Day62 - Xen DTB 분할과 IPMMU/passthrough Ownership Ledger](/posts/r-company-x5h-day62-xen-dtb-split-ipmmu-passthrough-ownership/)
 66. [R사 X5H Day63 - DomD/CR52/RVGC/RPMsg Display Hand-off 실패 패턴](/posts/r-company-x5h-day63-domd-cr52-rvgc-rpmsg-display-handoff-failure-patterns/)
+67. [R사 X5H Day64 - RVGC plane commit 경로와 black-screen signature 분리](/posts/r-company-x5h-day64-rvgc-plane-commit-black-screen-signatures/)
 
 ## 운영 원칙
 
