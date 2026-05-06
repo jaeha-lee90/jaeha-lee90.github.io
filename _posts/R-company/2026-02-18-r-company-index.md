@@ -79,6 +79,7 @@ pin: true
 66. [R사 X5H Day63 - DomD/CR52/RVGC/RPMsg Display Hand-off 실패 패턴](/posts/r-company-x5h-day63-domd-cr52-rvgc-rpmsg-display-handoff-failure-patterns/)
 67. [R사 X5H Day64 - RVGC plane commit 경로와 black-screen signature 분리](/posts/r-company-x5h-day64-rvgc-plane-commit-black-screen-signatures/)
 68. [R사 X5H Day65 - Android multi-display routing과 RVGC display index mismatch](/posts/r-company-x5h-day65-android-multidisplay-rvgc-display-index-mismatch/)
+69. [R사 X5H Day66 - Display misroute 빠른 트리아지 체크리스트](/posts/r-company-x5h-day66-display-misroute-fast-triage-checklist/)
 
 ## 운영 원칙
 
