@@ -82,6 +82,7 @@ pin: true
 69. [R사 X5H Day66 - Display misroute 빠른 트리아지 체크리스트](/posts/r-company-x5h-day66-display-misroute-fast-triage-checklist/)
 70. [R사 X5H Day67 - Display misroute 타임라인 로그 SOP](/posts/r-company-x5h-day67-display-misroute-timeline-sop/)
 71. [R사 X5H Day68 - Driver panel black screen decision tree](/posts/r-company-x5h-day68-driver-panel-black-screen-decision-tree/)
+72. [R사 X5H Day69 - no-flush 가지 좁히기: layer reserve와 backend ACK 절단면](/posts/r-company-x5h-day69-no-flush-ladder-layer-reserve-ack-cutpoints/)
 
 ## 운영 원칙
 
