@@ -83,6 +83,7 @@ pin: true
 70. [R사 X5H Day67 - Display misroute 타임라인 로그 SOP](/posts/r-company-x5h-day67-display-misroute-timeline-sop/)
 71. [R사 X5H Day68 - Driver panel black screen decision tree](/posts/r-company-x5h-day68-driver-panel-black-screen-decision-tree/)
 72. [R사 X5H Day69 - no-flush 가지 좁히기: layer reserve와 backend ACK 절단면](/posts/r-company-x5h-day69-no-flush-ladder-layer-reserve-ack-cutpoints/)
+73. [R사 X5H Day70 - flush 성공 후 no-VBLANK: CR52 enable 순서와 final scanout 절단면](/posts/r-company-x5h-day70-flush-ok-no-vblank-cr52-final-scanout-cutpoints/)
 
 ## 운영 원칙
 
