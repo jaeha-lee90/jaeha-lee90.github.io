@@ -85,6 +85,7 @@ pin: true
 72. [R사 X5H Day69 - no-flush 가지 좁히기: layer reserve와 backend ACK 절단면](/posts/r-company-x5h-day69-no-flush-ladder-layer-reserve-ack-cutpoints/)
 73. [R사 X5H Day70 - flush 성공 후 no-VBLANK: CR52 enable 순서와 final scanout 절단면](/posts/r-company-x5h-day70-flush-ok-no-vblank-cr52-final-scanout-cutpoints/)
 74. [R사 X5H Day71 - flush 성공 후 no-VBLANK를 10분 안에 자르는 CR52/panel timing 체크리스트](/posts/r-company-x5h-day71-flush-ok-no-vblank-10min-cr52-panel-timing-checklist/)
+75. [R사 X5H Day72 - DISPLAY_GET_INFO 와 panel mode/format mismatch가 black screen으로 번지는 경로](/posts/r-company-x5h-day72-display-get-info-panel-mode-format-mismatch/)
 
 ## 운영 원칙
 
