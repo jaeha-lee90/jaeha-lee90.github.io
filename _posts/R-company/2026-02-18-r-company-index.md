@@ -86,6 +86,7 @@ pin: true
 73. [R사 X5H Day70 - flush 성공 후 no-VBLANK: CR52 enable 순서와 final scanout 절단면](/posts/r-company-x5h-day70-flush-ok-no-vblank-cr52-final-scanout-cutpoints/)
 74. [R사 X5H Day71 - flush 성공 후 no-VBLANK를 10분 안에 자르는 CR52/panel timing 체크리스트](/posts/r-company-x5h-day71-flush-ok-no-vblank-10min-cr52-panel-timing-checklist/)
 75. [R사 X5H Day72 - DISPLAY_GET_INFO 와 panel mode/format mismatch가 black screen으로 번지는 경로](/posts/r-company-x5h-day72-display-get-info-panel-mode-format-mismatch/)
+76. [R사 X5H Day73 - VBLANK는 살아 있는데 black screen일 때 plane content/address/stride 1차 절단 체크리스트](/posts/r-company-x5h-day73-vblank-alive-black-screen-plane-content-address-stride-checklist/)
 
 ## 운영 원칙
 
