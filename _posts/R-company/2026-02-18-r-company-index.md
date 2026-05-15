@@ -88,6 +88,7 @@ pin: true
 75. [R사 X5H Day72 - DISPLAY_GET_INFO 와 panel mode/format mismatch가 black screen으로 번지는 경로](/posts/r-company-x5h-day72-display-get-info-panel-mode-format-mismatch/)
 76. [R사 X5H Day73 - VBLANK는 살아 있는데 black screen일 때 plane content/address/stride 1차 절단 체크리스트](/posts/r-company-x5h-day73-vblank-alive-black-screen-plane-content-address-stride-checklist/)
 77. [R사 X5H Day74 - plane source는 맞는데 안 보일 때 IOMMU/passthrough/cache sync 10분 체크리스트](/posts/r-company-x5h-day74-plane-src-ok-but-no-visible-output-iommu-passthrough-cache-sync-checklist/)
+78. [R사 X5H Day75 - IOMMU/cache sync 정상 후 남는 alpha/blend/z-order/plane enable black screen 체크리스트](/posts/r-company-x5h-day75-alpha-blend-zorder-plane-enable-black-screen-checklist/)
 
 ## 운영 원칙
 
