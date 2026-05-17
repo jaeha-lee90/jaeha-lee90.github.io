@@ -90,6 +90,7 @@ pin: true
 77. [R사 X5H Day74 - plane source는 맞는데 안 보일 때 IOMMU/passthrough/cache sync 10분 체크리스트](/posts/r-company-x5h-day74-plane-src-ok-but-no-visible-output-iommu-passthrough-cache-sync-checklist/)
 78. [R사 X5H Day75 - IOMMU/cache sync 정상 후 남는 alpha/blend/z-order/plane enable black screen 체크리스트](/posts/r-company-x5h-day75-alpha-blend-zorder-plane-enable-black-screen-checklist/)
 79. [R사 X5H Day76 - alpha/z-order/plane enable 정상 후 남는 CSC/RGB-YUV/range swap/panel blanking 체크리스트](/posts/r-company-x5h-day76-csc-rgb-yuv-range-swap-panel-blanking-checklist/)
+80. [R사 X5H Day77 - CSC/range 정상 후 남는 backlight-PWM/TE sync/lane status panel electrical 체크리스트](/posts/r-company-x5h-day77-backlight-pwm-te-sync-lane-status-panel-electrical-checklist/)
 
 ## 운영 원칙
 
