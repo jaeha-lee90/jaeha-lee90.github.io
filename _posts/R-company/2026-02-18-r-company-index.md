@@ -92,6 +92,7 @@ pin: true
 79. [R사 X5H Day76 - alpha/z-order/plane enable 정상 후 남는 CSC/RGB-YUV/range swap/panel blanking 체크리스트](/posts/r-company-x5h-day76-csc-rgb-yuv-range-swap-panel-blanking-checklist/)
 80. [R사 X5H Day77 - CSC/range 정상 후 남는 backlight-PWM/TE sync/lane status panel electrical 체크리스트](/posts/r-company-x5h-day77-backlight-pwm-te-sync-lane-status-panel-electrical-checklist/)
 81. [R사 X5H Day78 - panel register dump/test pattern/BIST로 SoC 출력 vs panel 내부 처리 절단하기](/posts/r-company-x5h-day78-panel-register-dump-test-pattern-bist-cutline/)
+82. [R사 X5H Day79 - panel TPG는 보이는데 외부 frame만 안 보일 때 command/video mode·porch·packetization 체크리스트](/posts/r-company-x5h-day79-panel-tpg-ok-external-frame-fail-command-video-mode-packetization-checklist/)
 
 ## 운영 원칙
 
