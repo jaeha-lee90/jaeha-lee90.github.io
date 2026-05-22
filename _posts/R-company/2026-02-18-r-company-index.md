@@ -95,6 +95,7 @@ pin: true
 82. [R사 X5H Day79 - panel TPG는 보이는데 외부 frame만 안 보일 때 command/video mode·porch·packetization 체크리스트](/posts/r-company-x5h-day79-panel-tpg-ok-external-frame-fail-command-video-mode-packetization-checklist/)
 83. [R사 X5H Day80 - mode/timing 정상 후 남는 continuous clock·ULPS exit·reset 후 첫 frame race 체크리스트](/posts/r-company-x5h-day80-continuous-clock-ulps-reset-first-frame-race-checklist/)
 84. [R사 X5H Day81 - panel link 정상 후 남는 multi-display backend mux·clone·DSC slice 체크리스트](/posts/r-company-x5h-day81-multi-display-backend-mux-dsc-slice-checklist/)
+85. [R사 X5H Day82 - backend route 정상 후 남는 HWC layer assignment·virtual display·mirror policy 체크리스트](/posts/r-company-x5h-day82-hwc-layer-assignment-virtual-display-mirror-policy-checklist/)
 
 ## 운영 원칙
 
