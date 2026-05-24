@@ -97,6 +97,7 @@ pin: true
 84. [R사 X5H Day81 - panel link 정상 후 남는 multi-display backend mux·clone·DSC slice 체크리스트](/posts/r-company-x5h-day81-multi-display-backend-mux-dsc-slice-checklist/)
 85. [R사 X5H Day82 - backend route 정상 후 남는 HWC layer assignment·virtual display·mirror policy 체크리스트](/posts/r-company-x5h-day82-hwc-layer-assignment-virtual-display-mirror-policy-checklist/)
 86. [R사 X5H Day83 - HWC assignment 정상 후 남는 GPU client composition·overlay capability·fence starvation 체크리스트](/posts/r-company-x5h-day83-gpu-client-composition-overlay-capability-fence-starvation-checklist/)
+87. [R사 X5H Day84 - GPU/fence 정상 후 남는 boot animation 전환·launcher attach·first app transaction 타이밍 체크리스트](/posts/r-company-x5h-day84-boot-animation-launcher-first-app-transaction-timing-checklist/)
 
 ## 운영 원칙
 
