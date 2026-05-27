@@ -100,6 +100,7 @@ pin: true
 87. [R사 X5H Day84 - GPU/fence 정상 후 남는 boot animation 전환·launcher attach·first app transaction 타이밍 체크리스트](/posts/r-company-x5h-day84-boot-animation-launcher-first-app-transaction-timing-checklist/)
 88. [R사 X5H Day85 - task reparent·display area 이동·surface destroy/recreate race 체크리스트](/posts/r-company-x5h-day85-task-reparent-display-area-surface-destroy-recreate-race-checklist/)
 89. [R사 X5H Day86 - configuration relaunch·resource qualifier 변경·buffer size 재협상 타이밍 체크리스트](/posts/r-company-x5h-day86-config-relaunch-resource-qualifier-buffer-size-renegotiation-checklist/)
+90. [R사 X5H Day87 - sync group·BLASTBufferQueue·unsignaled latch 허용 정책 체크리스트](/posts/r-company-x5h-day87-sync-group-blastbufferqueue-unsignaled-latch-policy-checklist/)
 
 ## 운영 원칙
 
