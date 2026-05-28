@@ -101,6 +101,7 @@ pin: true
 88. [R사 X5H Day85 - task reparent·display area 이동·surface destroy/recreate race 체크리스트](/posts/r-company-x5h-day85-task-reparent-display-area-surface-destroy-recreate-race-checklist/)
 89. [R사 X5H Day86 - configuration relaunch·resource qualifier 변경·buffer size 재협상 타이밍 체크리스트](/posts/r-company-x5h-day86-config-relaunch-resource-qualifier-buffer-size-renegotiation-checklist/)
 90. [R사 X5H Day87 - sync group·BLASTBufferQueue·unsignaled latch 허용 정책 체크리스트](/posts/r-company-x5h-day87-sync-group-blastbufferqueue-unsignaled-latch-policy-checklist/)
+91. [R사 X5H Day88 - transaction merge order·leash hierarchy·visibility bit propagation 체크리스트](/posts/r-company-x5h-day88-transaction-merge-order-leash-visibility-propagation-checklist/)
 
 ## 운영 원칙
 
