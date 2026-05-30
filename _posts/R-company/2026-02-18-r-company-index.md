@@ -103,6 +103,7 @@ pin: true
 90. [R사 X5H Day87 - sync group·BLASTBufferQueue·unsignaled latch 허용 정책 체크리스트](/posts/r-company-x5h-day87-sync-group-blastbufferqueue-unsignaled-latch-policy-checklist/)
 91. [R사 X5H Day88 - transaction merge order·leash hierarchy·visibility bit propagation 체크리스트](/posts/r-company-x5h-day88-transaction-merge-order-leash-visibility-propagation-checklist/)
 92. [R사 X5H Day89 - wallpaper·dim layer·color layer·trusted overlay occlusion 체크리스트](/posts/r-company-x5h-day89-wallpaper-dim-colorlayer-trusted-overlay-occlusion-checklist/)
+93. [R사 X5H Day90 - screenshot·client composition·GPU output black frame 절단면](/posts/r-company-x5h-day90-screenshot-client-composition-gpu-black-frame-cutline/)
 
 ## 운영 원칙
 
