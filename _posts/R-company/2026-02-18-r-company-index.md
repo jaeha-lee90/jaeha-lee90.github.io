@@ -106,6 +106,7 @@ pin: true
 93. [R사 X5H Day90 - screenshot·client composition·GPU output black frame 절단면](/posts/r-company-x5h-day90-screenshot-client-composition-gpu-black-frame-cutline/)
 94. [R사 X5H Day91 - splashscreen·starting window·real content attach black window 절단면](/posts/r-company-x5h-day91-splashscreen-starting-window-real-content-attach-cutline/)
 95. [R사 X5H Day92 - EGL surface·BufferQueue dequeue·first texture upload 지연 절단면](/posts/r-company-x5h-day92-egl-surface-bufferqueue-first-texture-upload-cutline/)
+96. [R사 X5H Day93 - viewport·transform·crop first-frame mis-programming 절단면](/posts/r-company-x5h-day93-viewport-transform-crop-first-frame-misprogramming-cutline/)
 
 ## 운영 원칙
 
