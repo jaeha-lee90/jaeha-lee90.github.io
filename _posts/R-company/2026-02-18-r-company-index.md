@@ -110,6 +110,7 @@ pin: true
 97. [R사 X5H Day94 - acquire/release/present fence first-frame one-beat slip 절단면](/posts/r-company-x5h-day94-acquire-release-present-fence-first-frame-onebeat-slip-cutline/)
 98. [R사 X5H Day95 - color mode·dataspace·alpha 초기값 first-frame black 합성 절단면](/posts/r-company-x5h-day95-color-mode-dataspace-alpha-first-frame-black-composition-cutline/)
 99. [R사 X5H Day96 - idle frame drop·doze/blank transition·display enable sequencing first-frame discard cutline](/posts/r-company-x5h-day96-idle-frame-drop-doze-blank-display-enable-cutline/)
+100. [R사 X5H Day97 - writeback·CRC·TE/VBLANK로 first visible pixel 실스캔 여부 절단하기](/posts/r-company-x5h-day97-writeback-crc-te-vblank-visible-pixel-cutline/)
 
 ## 운영 원칙
 
