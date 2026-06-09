@@ -113,6 +113,7 @@ pin: true
 100. [R사 X5H Day97 - writeback·CRC·TE/VBLANK로 first visible pixel 실스캔 여부 절단하기](/posts/r-company-x5h-day97-writeback-crc-te-vblank-visible-pixel-cutline/)
 101. [R사 X5H Day98 - DSI command queue flush·TCON frame-start latch·bridge/panel guard-time panel ingress cutline](/posts/r-company-x5h-day98-dsi-command-queue-tcon-guard-time-panel-ingress-cutline/)
 102. [R사 X5H Day99 - backlight/PWM·local dimming·panel self-refresh exit first visible UI cutline](/posts/r-company-x5h-day99-backlight-pwm-local-dimming-panel-self-refresh-first-visible-ui-cutline/)
+103. [R사 X5H Day100 - brightness ownership 경쟁·backlight write ordering 깜빡임/재흑화 cutline](/posts/r-company-x5h-day100-brightness-ownership-race-backlight-write-ordering-cutline/)
 
 ## 운영 원칙
 
