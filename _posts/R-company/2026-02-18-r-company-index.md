@@ -115,6 +115,7 @@ pin: true
 102. [R사 X5H Day99 - backlight/PWM·local dimming·panel self-refresh exit first visible UI cutline](/posts/r-company-x5h-day99-backlight-pwm-local-dimming-panel-self-refresh-first-visible-ui-cutline/)
 103. [R사 X5H Day100 - brightness ownership 경쟁·backlight write ordering 깜빡임/재흑화 cutline](/posts/r-company-x5h-day100-brightness-ownership-race-backlight-write-ordering-cutline/)
 104. [R사 X5H Day101 - HWC color fade·fade layer·display power mode transition flicker cutline](/posts/r-company-x5h-day101-hwc-color-fade-fade-layer-display-power-transition-cutline/)
+105. [R사 X5H Day102 - bootanim exit·launcher first draw·SurfaceFlinger layer lifecycle flicker cutline](/posts/r-company-x5h-day102-bootanim-exit-launcher-firstdraw-sf-layer-lifecycle-cutline/)
 
 ## 운영 원칙
 
