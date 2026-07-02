@@ -117,6 +117,7 @@ pin: true
 104. [R사 X5H Day101 - HWC color fade·fade layer·display power mode transition flicker cutline](/posts/r-company-x5h-day101-hwc-color-fade-fade-layer-display-power-transition-cutline/)
 105. [R사 X5H Day102 - bootanim exit·launcher first draw·SurfaceFlinger layer lifecycle flicker cutline](/posts/r-company-x5h-day102-bootanim-exit-launcher-firstdraw-sf-layer-lifecycle-cutline/)
 106. [R사 X5H Day103 - launcher first buffer dequeue·unsignaled latch·present fence residual black-frame cutline](/posts/r-company-x5h-day103-launcher-first-bufferqueue-unsignaled-latch-present-fence-cutline/)
+107. [R사 X5H Day104 - GPU clear color·client target reuse·overlay fallback residual black-frame cutline](/posts/r-company-x5h-day104-gpu-clear-client-target-overlay-fallback-cutline/)
 
 ## 운영 원칙
 
