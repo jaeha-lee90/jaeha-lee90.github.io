@@ -118,6 +118,7 @@ pin: true
 105. [R사 X5H Day102 - bootanim exit·launcher first draw·SurfaceFlinger layer lifecycle flicker cutline](/posts/r-company-x5h-day102-bootanim-exit-launcher-firstdraw-sf-layer-lifecycle-cutline/)
 106. [R사 X5H Day103 - launcher first buffer dequeue·unsignaled latch·present fence residual black-frame cutline](/posts/r-company-x5h-day103-launcher-first-bufferqueue-unsignaled-latch-present-fence-cutline/)
 107. [R사 X5H Day104 - GPU clear color·client target reuse·overlay fallback residual black-frame cutline](/posts/r-company-x5h-day104-gpu-clear-client-target-overlay-fallback-cutline/)
+108. [R사 X5H Day105 - writeback CRC·panel ingress trace·post-blend capture display-pipe 후단 cutline](/posts/r-company-x5h-day105-writeback-crc-panel-ingress-postblend-capture-cutline/)
 
 ## 운영 원칙
 
