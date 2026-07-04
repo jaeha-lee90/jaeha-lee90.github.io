@@ -119,6 +119,7 @@ pin: true
 106. [R사 X5H Day103 - launcher first buffer dequeue·unsignaled latch·present fence residual black-frame cutline](/posts/r-company-x5h-day103-launcher-first-bufferqueue-unsignaled-latch-present-fence-cutline/)
 107. [R사 X5H Day104 - GPU clear color·client target reuse·overlay fallback residual black-frame cutline](/posts/r-company-x5h-day104-gpu-clear-client-target-overlay-fallback-cutline/)
 108. [R사 X5H Day105 - writeback CRC·panel ingress trace·post-blend capture display-pipe 후단 cutline](/posts/r-company-x5h-day105-writeback-crc-panel-ingress-postblend-capture-cutline/)
+109. [R사 X5H Day106 - TE/vsync phase·first-frame release window·panel self-refresh exit residual black-frame cutline](/posts/r-company-x5h-day106-te-vsync-firstframe-release-panel-selfrefresh-cutline/)
 
 ## 운영 원칙
 
