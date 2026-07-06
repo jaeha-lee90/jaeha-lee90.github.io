@@ -121,6 +121,7 @@ pin: true
 108. [R사 X5H Day105 - writeback CRC·panel ingress trace·post-blend capture display-pipe 후단 cutline](/posts/r-company-x5h-day105-writeback-crc-panel-ingress-postblend-capture-cutline/)
 109. [R사 X5H Day106 - TE/vsync phase·first-frame release window·panel self-refresh exit residual black-frame cutline](/posts/r-company-x5h-day106-te-vsync-firstframe-release-panel-selfrefresh-cutline/)
 110. [R사 X5H Day107 - backlight unblank·local dimming release·display power-mode handoff final visibility cutline](/posts/r-company-x5h-day107-backlight-unblank-local-dimming-power-handoff-cutline/)
+111. [R사 X5H Day108 - bootanimation 제거·launcher window reveal·color-fade overlay teardown final UI reveal cutline](/posts/r-company-x5h-day108-bootanim-remove-launcher-reveal-color-fade-teardown-cutline/)
 
 ## 운영 원칙
 
