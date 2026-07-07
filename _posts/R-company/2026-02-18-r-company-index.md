@@ -122,6 +122,7 @@ pin: true
 109. [R사 X5H Day106 - TE/vsync phase·first-frame release window·panel self-refresh exit residual black-frame cutline](/posts/r-company-x5h-day106-te-vsync-firstframe-release-panel-selfrefresh-cutline/)
 110. [R사 X5H Day107 - backlight unblank·local dimming release·display power-mode handoff final visibility cutline](/posts/r-company-x5h-day107-backlight-unblank-local-dimming-power-handoff-cutline/)
 111. [R사 X5H Day108 - bootanimation 제거·launcher window reveal·color-fade overlay teardown final UI reveal cutline](/posts/r-company-x5h-day108-bootanim-remove-launcher-reveal-color-fade-teardown-cutline/)
+112. [R사 X5H Day109 - wallpaper attach·task snapshot 잔류·trusted overlay occlusion final screen-cover cutline](/posts/r-company-x5h-day109-wallpaper-snapshot-trusted-overlay-final-occlusion-cutline/)
 
 ## 운영 원칙
 
