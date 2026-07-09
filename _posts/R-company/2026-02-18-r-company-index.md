@@ -124,6 +124,7 @@ pin: true
 111. [R사 X5H Day108 - bootanimation 제거·launcher window reveal·color-fade overlay teardown final UI reveal cutline](/posts/r-company-x5h-day108-bootanim-remove-launcher-reveal-color-fade-teardown-cutline/)
 112. [R사 X5H Day109 - wallpaper attach·task snapshot 잔류·trusted overlay occlusion final screen-cover cutline](/posts/r-company-x5h-day109-wallpaper-snapshot-trusted-overlay-final-occlusion-cutline/)
 113. [R사 X5H Day110 - screenshot·color transform·client target lineage final dark-frame cutline](/posts/r-company-x5h-day110-screenshot-color-transform-client-target-final-dark-frame-cutline/)
+114. [R사 X5H Day111 - backlight ownership·local dimming release·CABC/ALS final luminance jump cutline](/posts/r-company-x5h-day111-backlight-ownership-local-dimming-cabc-als-luminance-jump-cutline/)
 
 ## 운영 원칙
 
