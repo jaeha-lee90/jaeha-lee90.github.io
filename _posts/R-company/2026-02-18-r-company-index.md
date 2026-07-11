@@ -126,6 +126,7 @@ pin: true
 113. [R사 X5H Day110 - screenshot·color transform·client target lineage final dark-frame cutline](/posts/r-company-x5h-day110-screenshot-color-transform-client-target-final-dark-frame-cutline/)
 114. [R사 X5H Day111 - backlight ownership·local dimming release·CABC/ALS final luminance jump cutline](/posts/r-company-x5h-day111-backlight-ownership-local-dimming-cabc-als-luminance-jump-cutline/)
 115. [R사 X5H Day112 - panel gamma·ACL·tonemap transition final color-pop cutline](/posts/r-company-x5h-day112-panel-gamma-acl-tonemap-color-pop-cutline/)
+116. [R사 X5H Day113 - dither·FRC·DSC restore timing layer-boundary flash/contour break cutline](/posts/r-company-x5h-day113-dither-frc-dsc-restore-boundary-flash-cutline/)
 
 ## 운영 원칙
 
