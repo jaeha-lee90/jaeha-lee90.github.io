@@ -128,6 +128,7 @@ pin: true
 115. [R사 X5H Day112 - panel gamma·ACL·tonemap transition final color-pop cutline](/posts/r-company-x5h-day112-panel-gamma-acl-tonemap-color-pop-cutline/)
 116. [R사 X5H Day113 - dither·FRC·DSC restore timing layer-boundary flash/contour break cutline](/posts/r-company-x5h-day113-dither-frc-dsc-restore-boundary-flash-cutline/)
 117. [R사 X5H Day114 - overdrive·response compensation·panel memory clear residual image cutline](/posts/r-company-x5h-day114-overdrive-response-compensation-panel-memory-clear-cutline/)
+118. [R사 X5H Day115 - thermal compensation·VCOM/aging LUT·temperature bin latch cold-boot flicker cutline](/posts/r-company-x5h-day115-thermal-compensation-vcom-aging-lut-temperature-bin-flicker-cutline/)
 
 ## 운영 원칙
 
