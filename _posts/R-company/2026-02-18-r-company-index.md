@@ -129,6 +129,7 @@ pin: true
 116. [R사 X5H Day113 - dither·FRC·DSC restore timing layer-boundary flash/contour break cutline](/posts/r-company-x5h-day113-dither-frc-dsc-restore-boundary-flash-cutline/)
 117. [R사 X5H Day114 - overdrive·response compensation·panel memory clear residual image cutline](/posts/r-company-x5h-day114-overdrive-response-compensation-panel-memory-clear-cutline/)
 118. [R사 X5H Day115 - thermal compensation·VCOM/aging LUT·temperature bin latch cold-boot flicker cutline](/posts/r-company-x5h-day115-thermal-compensation-vcom-aging-lut-temperature-bin-flicker-cutline/)
+119. [R사 X5H Day116 - VRR/refresh switch·PLL relock·frame-time quantization transient jitter cutline](/posts/r-company-x5h-day116-vrr-refresh-switch-pll-relock-frame-time-quantization-cutline/)
 
 ## 운영 원칙
 
