@@ -130,6 +130,7 @@ pin: true
 117. [R사 X5H Day114 - overdrive·response compensation·panel memory clear residual image cutline](/posts/r-company-x5h-day114-overdrive-response-compensation-panel-memory-clear-cutline/)
 118. [R사 X5H Day115 - thermal compensation·VCOM/aging LUT·temperature bin latch cold-boot flicker cutline](/posts/r-company-x5h-day115-thermal-compensation-vcom-aging-lut-temperature-bin-flicker-cutline/)
 119. [R사 X5H Day116 - VRR/refresh switch·PLL relock·frame-time quantization transient jitter cutline](/posts/r-company-x5h-day116-vrr-refresh-switch-pll-relock-frame-time-quantization-cutline/)
+120. [R사 X5H Day117 - spread-spectrum clocking·EMI margin·lane deskew transient horizontal noise cutline](/posts/r-company-x5h-day117-spread-spectrum-clocking-emi-margin-lane-deskew-cutline/)
 
 ## 운영 원칙
 
