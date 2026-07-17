@@ -132,6 +132,7 @@ pin: true
 119. [R사 X5H Day116 - VRR/refresh switch·PLL relock·frame-time quantization transient jitter cutline](/posts/r-company-x5h-day116-vrr-refresh-switch-pll-relock-frame-time-quantization-cutline/)
 120. [R사 X5H Day117 - spread-spectrum clocking·EMI margin·lane deskew transient horizontal noise cutline](/posts/r-company-x5h-day117-spread-spectrum-clocking-emi-margin-lane-deskew-cutline/)
 121. [R사 X5H Day118 - panel self-refresh exit retention·DSC line-buffer underflow·ESD recovery latent artifact cutline](/posts/r-company-x5h-day118-panel-self-refresh-retention-dsc-linebuffer-esd-recovery-cutline/)
+122. [R사 X5H Day119 - memory bandwidth QoS·interconnect DVFS·display underflow telemetry cutline](/posts/r-company-x5h-day119-memory-bandwidth-qos-interconnect-dvfs-display-underflow-cutline/)
 
 ## 운영 원칙
 
