@@ -133,6 +133,7 @@ pin: true
 120. [R사 X5H Day117 - spread-spectrum clocking·EMI margin·lane deskew transient horizontal noise cutline](/posts/r-company-x5h-day117-spread-spectrum-clocking-emi-margin-lane-deskew-cutline/)
 121. [R사 X5H Day118 - panel self-refresh exit retention·DSC line-buffer underflow·ESD recovery latent artifact cutline](/posts/r-company-x5h-day118-panel-self-refresh-retention-dsc-linebuffer-esd-recovery-cutline/)
 122. [R사 X5H Day119 - memory bandwidth QoS·interconnect DVFS·display underflow telemetry cutline](/posts/r-company-x5h-day119-memory-bandwidth-qos-interconnect-dvfs-display-underflow-cutline/)
+123. [R사 X5H Day120 - cache maintenance·dma-buf heap placement·IOMMU TLB pressure cutline](/posts/r-company-x5h-day120-cache-maintenance-dmabuf-heap-placement-iommu-tlb-pressure-cutline/)
 
 ## 운영 원칙
 
