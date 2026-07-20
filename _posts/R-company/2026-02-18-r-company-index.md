@@ -135,6 +135,7 @@ pin: true
 122. [R사 X5H Day119 - memory bandwidth QoS·interconnect DVFS·display underflow telemetry cutline](/posts/r-company-x5h-day119-memory-bandwidth-qos-interconnect-dvfs-display-underflow-cutline/)
 123. [R사 X5H Day120 - cache maintenance·dma-buf heap placement·IOMMU TLB pressure cutline](/posts/r-company-x5h-day120-cache-maintenance-dmabuf-heap-placement-iommu-tlb-pressure-cutline/)
 124. [R사 X5H Day121 - fence ordering·prefetch window·plane fetch watermark cutline](/posts/r-company-x5h-day121-fence-ordering-prefetch-window-plane-fetch-watermark-cutline/)
+125. [R사 X5H Day122 - compression metadata·AFBC/UBWC header fetch·plane rotation/scaler line-buffer cutline](/posts/r-company-x5h-day122-compression-metadata-afbc-ubwc-header-rotation-scaler-linebuffer-cutline/)
 
 ## 운영 원칙
 
