@@ -137,6 +137,7 @@ pin: true
 124. [R사 X5H Day121 - fence ordering·prefetch window·plane fetch watermark cutline](/posts/r-company-x5h-day121-fence-ordering-prefetch-window-plane-fetch-watermark-cutline/)
 125. [R사 X5H Day122 - compression metadata·AFBC/UBWC header fetch·plane rotation/scaler line-buffer cutline](/posts/r-company-x5h-day122-compression-metadata-afbc-ubwc-header-rotation-scaler-linebuffer-cutline/)
 126. [R사 X5H Day123 - gralloc mapper·dma-buf import·modifier negotiation cutline](/posts/r-company-x5h-day123-gralloc-mapper-dmabuf-import-modifier-negotiation-cutline/)
+127. [R사 X5H Day124 - gralloc cacheability·CPU map/unmap·explicit sync cutline](/posts/r-company-x5h-day124-gralloc-cacheability-cpu-map-unmap-explicit-sync-cutline/)
 
 ## 운영 원칙
 
