@@ -1,0 +1,15 @@
+flowchart TB
+    subgraph DATA["Frame / Data Path"]
+        D1["Sensor pixel data"] --> D2["SerDes transport"] --> D3["CSI / VIN ingest"] --> D4["Shared / streamed buffer"] --> D5["Linux capture / post-process"] --> D6["DRM or RTOS scanout"] --> D7["Visible display"]
+    end
+
+    subgraph CTRL["Control / Config Path"]
+        C1["camfwk config"] --> C2["Sensor + link setup"] --> C3["Route bind\nCSI / VIN / ISP"] --> C4["Channel init / start"] --> C5["Frame-ready / feed-buffer handshake"] --> C6["Android display policy / UI target"]
+    end
+
+    classDef data fill:#EAF2FF,stroke:#2563EB,stroke-width:2px,color:#0F172A;
+    classDef ctrl fill:#FFF4E8,stroke:#F97316,stroke-width:2px,color:#111827;
+    class D1,D2,D3,D4,D5,D6,D7 data;
+    class C1,C2,C3,C4,C5,C6 ctrl;
+    linkStyle 0,1,2,3,4,5 stroke:#2563EB,stroke-width:3px;
+    linkStyle 6,7,8,9,10 stroke:#F97316,stroke-width:2.5px,stroke-dasharray: 6 4;

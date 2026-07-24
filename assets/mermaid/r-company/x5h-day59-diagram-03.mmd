@@ -1,0 +1,12 @@
+flowchart TB
+    A["connector disconnected"] --> A1["panel power / bridge / link detect"]
+    B["drmOpen 실패"] --> B1["device node / domain ownership / probe"]
+    C["commit success but black screen"] --> C1["wrong plane / wrong CRTC / bad FB format"]
+    D["test pattern은 보이는데 Android UI 안 보임"] --> D1["HWC3 / SurfaceFlinger / layout policy"]
+    E["main display는 비고\npassenger에만 나옴"] --> E1["display_layout / CarService routing"]
+
+    classDef symptom fill:#FEE2E2,stroke:#DC2626,stroke-width:2px,color:#111827;
+    classDef cause fill:#FEF3C7,stroke:#D97706,stroke-width:2px,color:#111827;
+    class A,B,C,D,E symptom;
+    class A1,B1,C1,D1,E1 cause;
+    linkStyle 0,1,2,3,4 stroke:#475569,stroke-width:2.5px;

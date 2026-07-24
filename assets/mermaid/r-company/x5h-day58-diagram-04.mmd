@@ -1,0 +1,13 @@
+flowchart LR
+    A["Sensor"] --> B["Serializer / Deserializer"] --> C["CSI-2 / VIN"] --> D["CR52 camfwk HAL\nroute / init / config"] --> E["camera protocol\nINIT / START / FEED_BUFFER"] --> F[("RPMsg / shared buffer / bridge")] --> G["Linux V4L2 capture\n/dev/videoX"] --> H["DQBUF / QBUF loop"] --> I["ISP / IMR optional"] --> J["AI / VOUT / display optional"]
+
+    classDef ingress fill:#EAF2FF,stroke:#2563EB,stroke-width:2px,color:#0F172A;
+    classDef control fill:#FFF4E8,stroke:#F97316,stroke-width:2px,color:#111827;
+    classDef bridge fill:#FEF9C3,stroke:#CA8A04,stroke-width:2px,color:#111827;
+    classDef post fill:#EEFCEB,stroke:#16A34A,stroke-width:2px,color:#111827;
+    class A,B,C ingress;
+    class D,E,G,H control;
+    class F bridge;
+    class I,J post;
+    linkStyle 0,1,2,3,4,5,6,7 stroke:#334155,stroke-width:3px;
+    linkStyle 8 stroke:#16A34A,stroke-width:2.5px;

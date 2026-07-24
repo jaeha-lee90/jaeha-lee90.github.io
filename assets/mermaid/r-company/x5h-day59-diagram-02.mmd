@@ -1,0 +1,10 @@
+flowchart TB
+    S1["Stage 1\nCR52 disfwk / panel backend alive?"] --> S2["Stage 2\nLinux disfwk_fe open + DRM resources discoverable?"] --> S3["Stage 3\nFramebuffer / format / stride / size valid?"] --> S4["Stage 4\nRPMsg/RVGC flush + VBLANK hand-off succeeds?"] --> S5["Stage 5\nAndroid HWC3 / SF / multi-display policy correct?"]
+
+    classDef s1 fill:#DBEAFE,stroke:#2563EB,stroke-width:2px,color:#0F172A;
+    classDef s2 fill:#E0F2FE,stroke:#0284C7,stroke-width:2px,color:#0F172A;
+    classDef s3 fill:#FFF7ED,stroke:#EA580C,stroke-width:2px,color:#111827;
+    classDef s4 fill:#ECFCCB,stroke:#65A30D,stroke-width:2px,color:#111827;
+    classDef s5 fill:#F3E8FF,stroke:#9333EA,stroke-width:2px,color:#111827;
+    class S1 s1; class S2 s2; class S3 s3; class S4 s4; class S5 s5;
+    linkStyle 0,1,2,3 stroke:#334155,stroke-width:3px;
