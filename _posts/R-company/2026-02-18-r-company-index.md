@@ -140,6 +140,7 @@ pin: true
 127. [R사 X5H Day124 - gralloc cacheability·CPU map/unmap·explicit sync cutline](/posts/r-company-x5h-day124-gralloc-cacheability-cpu-map-unmap-explicit-sync-cutline/)
 128. [R사 X5H Day125 - protected buffer 속성·plane capability·GPU fallback cutline](/posts/r-company-x5h-day125-protected-buffer-plane-capability-gpu-fallback-cutline/)
 129. [R사 X5H Day126 - protected AFBC·stride·plane modifier 제한 secure video black-frame cutline](/posts/r-company-x5h-day126-protected-afbc-stride-plane-modifier-cutline/)
+130. [R사 X5H Day127 - secure video crop·viewport·scaler 제한 black-frame cutline](/posts/r-company-x5h-day127-secure-video-crop-viewport-scaler-cutline/)
 
 ## 운영 원칙
 
