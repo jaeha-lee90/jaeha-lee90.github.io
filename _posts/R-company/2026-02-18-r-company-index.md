@@ -141,6 +141,7 @@ pin: true
 128. [R사 X5H Day125 - protected buffer 속성·plane capability·GPU fallback cutline](/posts/r-company-x5h-day125-protected-buffer-plane-capability-gpu-fallback-cutline/)
 129. [R사 X5H Day126 - protected AFBC·stride·plane modifier 제한 secure video black-frame cutline](/posts/r-company-x5h-day126-protected-afbc-stride-plane-modifier-cutline/)
 130. [R사 X5H Day127 - secure video crop·viewport·scaler 제한 black-frame cutline](/posts/r-company-x5h-day127-secure-video-crop-viewport-scaler-cutline/)
+131. [R사 X5H Day128 - secure video format·chroma siting·CSC 경계 black/green frame cutline](/posts/r-company-x5h-day128-secure-video-format-chroma-csc-cutline/)
 
 ## 운영 원칙
 
