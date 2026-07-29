@@ -144,6 +144,7 @@ pin: true
 131. [R사 X5H Day128 - secure video format·chroma siting·CSC 경계 black/green frame cutline](/posts/r-company-x5h-day128-secure-video-format-chroma-csc-cutline/)
 132. [R사 X5H Day129 - secure session·HDCP·display policy final black-frame cutline](/posts/r-company-x5h-day129-secure-session-hdcp-display-policy-cutline/)
 133. [R사 X5H Day130 - secure compositor fallback·capture block·writeback/clone path cutline](/posts/r-company-x5h-day130-secure-compositor-capture-writeback-clone-cutline/)
+134. [R사 X5H Day131 - secure decoder dequeue·acquire fence·protected first-frame starvation cutline](/posts/r-company-x5h-day131-secure-decoder-acquire-fence-first-frame-starvation-cutline/)
 
 ## 운영 원칙
 
