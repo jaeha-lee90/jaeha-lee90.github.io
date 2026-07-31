@@ -146,6 +146,7 @@ pin: true
 133. [R사 X5H Day130 - secure compositor fallback·capture block·writeback/clone path cutline](/posts/r-company-x5h-day130-secure-compositor-capture-writeback-clone-cutline/)
 134. [R사 X5H Day131 - secure decoder dequeue·acquire fence·protected first-frame starvation cutline](/posts/r-company-x5h-day131-secure-decoder-acquire-fence-first-frame-starvation-cutline/)
 135. [R사 X5H Day132 - release fence backpressure·decoder surface recycle·protected buffer lifetime mismatch cutline](/posts/r-company-x5h-day132-release-fence-backpressure-buffer-lifetime-cutline/)
+136. [R사 X5H Day133 - decoder reconfigure·resolution switch·protected pipeline renegotiation cutline](/posts/r-company-x5h-day133-decoder-reconfigure-resolution-switch-protected-pipeline-renegotiation-cutline/)
 
 ## 운영 원칙
 
