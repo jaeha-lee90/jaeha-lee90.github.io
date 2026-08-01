@@ -1,0 +1,20 @@
+flowchart TD
+    S0["사용자 증상\n카메라 안 나옴"] --> S1{"/dev/videoX 존재?"}
+    S1 -- "No" --> R1["Driver / route / DT / domain 확인"]
+    S1 -- "Yes" --> S2{"stream_on 후 dqbuf 됨?"}
+    S2 -- "No" --> R2["Sensor ingress / CSI / VIN / interrupt 확인"]
+    S2 -- "Yes" --> S3{"계속 프레임이 도는가?"}
+    S3 -- "No, 1~N frame 후 멈춤" --> R3["Buffer recycle / FEED_BUFFER / starvation"]
+    S3 -- "Yes" --> S4{"후단 output 보이는가?"}
+    S4 -- "No" --> R4["ISP / IMR / AI / VOUT downstream 분리 확인"]
+    S4 -- "Yes" --> R5["Ingress 정상\n통합 단계 검증"]
+
+    classDef symptom fill:#DBEAFE,stroke:#2563EB,stroke-width:2px,color:#0F172A;
+    classDef decision fill:#FEF3C7,stroke:#D97706,stroke-width:2px,color:#111827;
+    classDef action fill:#FEE2E2,stroke:#DC2626,stroke-width:2px,color:#111827;
+    classDef good fill:#DCFCE7,stroke:#16A34A,stroke-width:2px,color:#111827;
+    class S0 symptom;
+    class S1,S2,S3,S4 decision;
+    class R1,R2,R3,R4 action;
+    class R5 good;
+    linkStyle 0,1,2,3,4,5,6,7 stroke:#475569,stroke-width:2.5px;

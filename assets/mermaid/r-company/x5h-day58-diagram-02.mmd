@@ -1,0 +1,11 @@
+flowchart TB
+    H1["Stage 1\nSensor / link alive?"] --> H2["Stage 2\nCSI / VIN topology match?"] --> H3["Stage 3\nCR52 camfwk init complete?"] --> H4["Stage 4\nLinux V4L2 stream stable?"] --> H5["Stage 5\nFrame-ready / feed-buffer contract healthy?"] --> H6["Stage 6\nISP / IMR / AI / VOUT downstream valid?"]
+
+    classDef s1 fill:#DBEAFE,stroke:#2563EB,stroke-width:2px,color:#0F172A;
+    classDef s2 fill:#E0F2FE,stroke:#0284C7,stroke-width:2px,color:#0F172A;
+    classDef s3 fill:#FFF7ED,stroke:#EA580C,stroke-width:2px,color:#111827;
+    classDef s4 fill:#ECFCCB,stroke:#65A30D,stroke-width:2px,color:#111827;
+    classDef s5 fill:#FEF3C7,stroke:#D97706,stroke-width:2px,color:#111827;
+    classDef s6 fill:#F3E8FF,stroke:#9333EA,stroke-width:2px,color:#111827;
+    class H1 s1; class H2 s2; class H3 s3; class H4 s4; class H5 s5; class H6 s6;
+    linkStyle 0,1,2,3,4 stroke:#334155,stroke-width:3px;

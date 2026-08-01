@@ -1,0 +1,38 @@
+flowchart LR
+    subgraph HW["Hardware Datapath"]
+        CAM["Camera sensor"] --> SER["Serializer"] --> DESER["Deserializer"] --> CSI["CSI-2 Rx"] --> VIN["VIN"] --> ISP["ISP"] --> IMR["IMR / LDC / Resize"] --> DISP["Display controller / scanout"] --> PANEL["Main / passenger panel"]
+    end
+
+    subgraph RT["R-core / CR52"]
+        CFG["Topology config\nsensor / link / csi / vin / isp"] --> RTCAM["camfwk service"] --> RTEVT["FRAME_READY / FEED_ME"]
+        RTDISP["R_WM display path"]
+    end
+
+    subgraph LX["Linux / Xen Driver Side"]
+        XEN["Xen"] --> DOM0["Dom0"] --> DOMD["DomD"]
+        VIRT[("vring / shared memory\nremoteproc")]
+        V4L2["V4L2 capture"] --> DRM["DRM/KMS atomic"]
+    end
+
+    subgraph AND["Android Guest"]
+        AK["Android kernel"] --> HWC["HWC3"] --> SF["SurfaceFlinger"] --> POLICY["Display policy"] --> UI["Automotive UI"]
+    end
+
+    RTEVT --> VIRT --> DOMD --> V4L2
+    RTDISP --> DISP
+    UI --> DRM --> DISP
+    XEN --> AK
+
+    classDef hw fill:#EAF2FF,stroke:#2563EB,stroke-width:2px,color:#0F172A;
+    classDef rt fill:#FFF4E8,stroke:#F97316,stroke-width:2px,color:#111827;
+    classDef lx fill:#EEFCEB,stroke:#16A34A,stroke-width:2px,color:#111827;
+    classDef and fill:#F3E8FF,stroke:#9333EA,stroke-width:2px,color:#111827;
+    classDef shared fill:#FEF9C3,stroke:#CA8A04,stroke-width:2px,color:#111827;
+    class CAM,SER,DESER,CSI,VIN,ISP,IMR,DISP,PANEL hw;
+    class CFG,RTCAM,RTEVT,RTDISP rt;
+    class XEN,DOM0,DOMD,V4L2,DRM lx;
+    class AK,HWC,SF,POLICY,UI and;
+    class VIRT shared;
+    linkStyle 0,1,2,3,4,5,6,7 stroke:#2563EB,stroke-width:3px;
+    linkStyle 8,9,10,11,12,13,14 stroke:#334155,stroke-width:2.5px;
+    linkStyle 15,16,17,18,19 stroke:#16A34A,stroke-width:3px;
